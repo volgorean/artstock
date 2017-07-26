@@ -181,6 +181,10 @@ header nav #logo {
 .roadmap h1 {
   text-align: center;
 }
+.roadmap p {
+  text-align: center;
+  font: 400 18px/22px 'Montserrat', sans-serif;
+}
 
 /***********************/
 /* timeline section */
