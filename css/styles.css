@@ -354,6 +354,22 @@ footer .call_to_action input {
   padding-left: 5px;
   margin-bottom: 10px;
 }
+footer .call_to_action .checkbox {
+  height: 32px;
+  width: 100%;
+  margin-bottom: 10px;
+  background: lightgray;
+}
+footer .call_to_action .checkbox input {
+  flex: 0 0 32px;
+  height: 20px;
+  padding: 0px;
+  margin: 6px;
+}
+footer .call_to_action .checkbox p {
+  flex: 1 1;
+  font: 500 18px/32px 'Open Sans', sans-serif;
+}
 footer #logo {
   display: block;
   width: 165px;
