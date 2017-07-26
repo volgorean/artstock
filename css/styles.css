@@ -165,45 +165,14 @@ header nav #logo {
 /***********************/
 
 .tech {
-  background: lavender;
+  background: lightgray;
 }
 .tech h1 {
   text-align: center;
 }
-
-/***********************/
-/* roadmap section */
-/***********************/
-
-.roadmap {
-  background: lavender;
-}
-.roadmap h1 {
-  text-align: center;
-}
-.roadmap p {
-  text-align: center;
-  font: 400 18px/22px 'Montserrat', sans-serif;
-}
-
-/***********************/
-/* timeline section */
-/***********************/
-
-.timeline {
-  text-align: left;
-  background: lightgray;
-}
-.timeline h4 {
-  font: 500 18px/24px 'Montserrat', sans-serif;
-  padding-right: 80px;
-  padding-bottom: 15px;
-  color: gray;
-}
-.timeline .temp_block {
+.tech .temp_block {
   background: darkgray;
 }
-
 
 /***********************/
 /* advisors section */
@@ -236,11 +205,8 @@ header nav #logo {
 /***********************/
 
 .faq {
-  background: lavender;
+  background: lightgray;
   padding-bottom: calc(320px + 80px);
-}
-.faq h1 {
-  text-align: center;
 }
 .faq .sidebar {
   flex: 0 0 140px;
@@ -273,6 +239,20 @@ header nav #logo {
   background: lightgray;
   border: none;
   margin: 10px 0;
+}
+
+/***********************/
+/* Page Header         */
+/***********************/
+.page_header {
+  background: lavender;
+}
+.page_header h1 {
+  text-align: left;
+}
+.page_header p {
+  text-align: left;
+  font: 400 18px/22px 'Montserrat', sans-serif;
 }
 
 /***********************/
