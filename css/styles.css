@@ -272,3 +272,17 @@ footer .call_to_action {
   border-radius: 3px;
   background: #ecf0f1;
 }
+footer #logo {
+  display: block;
+  width: 165px;
+  height: 45px;
+  margin-bottom: 5px;
+  background: gray;
+}
+footer .sec h5 {
+  font: 700 16px/32px 'Montserrat', sans-serif;
+}
+footer .sec li {
+  font: 300 12px/18px 'Montserrat', sans-serif;
+  cursor: pointer;
+}
