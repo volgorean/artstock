@@ -31,7 +31,8 @@ header nav #logo {
 }
 .intro {
   max-width: 720px;
-  margin: 80px auto;
+  margin: 0 auto;
+  padding: 80px 0;
   text-align: center;
 }
 .intro h2 {
@@ -160,7 +161,7 @@ header nav #logo {
 }
 
 /***********************/
-/* barrier to entry section */
+/* tech section */
 /***********************/
 
 .tech {
@@ -171,11 +172,24 @@ header nav #logo {
 }
 
 /***********************/
+/* roadmap section */
+/***********************/
+
+.roadmap {
+  background: lavender;
+}
+.roadmap h1 {
+  text-align: center;
+}
+
+
+/***********************/
 /* advisors section */
 /***********************/
 
 .advisors {
   background: lightgray;
+  padding-bottom: calc(320px + 80px);
 }
 .advisor {
   padding-bottom: 30px;
@@ -206,8 +220,16 @@ header nav #logo {
 .faq h1 {
   text-align: center;
 }
-.faq h1:nth-child(2) {
-  color: lightgray;
+.faq .sidebar {
+  flex: 0 0 140px;
+}
+.faq .sidebar h4 {
+  font: 700 16px/32px 'Montserrat', sans-serif;
+}
+.faq .sidebar li {
+  padding-left: 15px;
+  font: 300 12px/18px 'Montserrat', sans-serif;
+  cursor: pointer;
 }
 .faq .left {
   padding-right: 20px;
