@@ -53,9 +53,6 @@ html, body {
 }
 section, header, footer {
   width: 100%;
-  padding: 0 160px;
-}
-section {
   padding: 80px 160px;
 }
 section h1 {
@@ -67,4 +64,7 @@ section h1 {
   width: 100%;
   height: 280px;
   background: lightgray;
+}
+header .temp_block {
+  background: gray;
 }
