@@ -47,6 +47,18 @@ header p {
   text-align: left;
   font: 400 18px/22px 'Montserrat', sans-serif;
 }
+header a {
+  display: inline-block;
+  width: 220px;
+  margin-top: 10px;
+  margin-right: 5px;
+  font: 400 16px/28px 'Montserrat', sans-serif;
+  text-align: center;
+  border-radius: 3px;
+  background: white;
+  color: #222222;
+  border-bottom: 2px solid lightgray;
+}
 /* homepage specific */
 .home {
   padding-bottom: 0;
@@ -133,26 +145,77 @@ header p {
 .open_market {
   background: lavender;
 }
-.open_market h1 {
-  text-align: center;
+.open_market h5 {
+  font: 800 30px/40px 'Montserrat', sans-serif;
+  color: #222222;
+}
+.open_market .stats_block {
+}
+.open_market .stats_block > div:not(:last-child) {
+  padding-bottom: 10px;
+}
+.open_market .stats_block .icon {
+  flex: 0 0 50px;  
+  height: 50px;
+  margin: 10px;
+}
+.open_market .stats_block h3 {
+  font: 500 22px/24px 'Montserrat', sans-serif;
+  padding-bottom: 5px;
+  color: #383838;
+}
+.open_market .stats_block p {
+}
+.stat > .icon {
+  background: url(../images/conversation.svg);
+  background-size: contain;
+  background-position: center;
 }
 
 /***********************/
-/* transparency section */
+/* sharing section */
 /***********************/
 
-.transparency {
+.sharing {
   text-align: left;
   background: lightgray;
 }
-.transparency h4 {
+.sharing h4 {
   font: 500 18px/24px 'Montserrat', sans-serif;
   padding-right: 80px;
   padding-bottom: 15px;
   color: gray;
 }
-.transparency .temp_block {
-  background: darkgray;
+.sharing .points {
+  width: 100%;
+  padding: 20px 0;
+}
+.sharing .points .col {
+  height: 120px;
+}
+.sharing .points .col .icon {
+  flex: 0 0 120px;
+  height: 120px;
+  margin: 0 10px;
+  padding: 25px;
+  border-radius: 50%;
+  background: lavender;
+}
+.sharing .points .col .icon img {
+  display: block;
+  width: 70px;
+  height: 70px;
+}
+.sharing .points .col .text {
+  /*top: calc(50% - 40px);*/
+  margin-top: 25px;
+}
+.sharing .points .col h3 {
+  font: 500 22px/24px 'Montserrat', sans-serif;
+  padding-bottom: 10px;
+}
+.sharing .points .col p {
+  font: 500 14px/18px 'Open Sans', sans-serif;
 }
 
 /***********************/
@@ -164,37 +227,6 @@ header p {
 }
 .low_barrier h1 {
   text-align: center;
-}
-
-/***********************/
-/* evaluation section */
-/***********************/
-
-.evaluation {
-  background: lightgray;
-}
-.evaluation h4 {
-  font: 500 18px/24px 'Montserrat', sans-serif;
-  padding-right: 80px;
-  padding-bottom: 15px;
-  color: gray;
-}
-.evaluation .temp_block {
-  background: darkgray;
-}
-
-/***********************/
-/* tech section */
-/***********************/
-
-.tech {
-  background: lightgray;
-}
-.tech h1 {
-  text-align: center;
-}
-.tech .temp_block {
-  background: darkgray;
 }
 
 /***********************/
