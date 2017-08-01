@@ -425,3 +425,12 @@ footer .sec li {
   font: 300 12px/18px 'Montserrat', sans-serif;
   cursor: pointer;
 }
+footer .pin {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url(../images/pin.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
