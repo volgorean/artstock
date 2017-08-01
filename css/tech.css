@@ -7,21 +7,6 @@ section {
 }
 
 /***********************/
-/* evaluation section */
-/***********************/
-.evaluation {
-
-}
-
-/***********************/
-/* winwin section */
-/***********************/
-
-.winwin {
-
-}
-
-/***********************/
 /* ecosystem link section */
 /***********************/
 
@@ -42,12 +27,27 @@ section {
 }
 
 /***********************/
+/* evaluation section */
+/***********************/
+#evaluation {
+
+}
+
+/***********************/
+/* winwin section */
+/***********************/
+
+#winwin {
+
+}
+
+/***********************/
 /* apo section */
 /***********************/
 
-.apo {
+#apo {
 }
-.apo .temp_block {
+#apo .temp_block {
   height: 140px;
   background: lavender;
 }
@@ -56,9 +56,9 @@ section {
 /* trading section */
 /***********************/
 
-.trading {
+#trading {
 }
-.trading .temp_block {
+#trading .temp_block {
   height: 140px;
   background: lavender;
 }
@@ -67,10 +67,10 @@ section {
 /* acquisition section */
 /***********************/
 
-.acquisition {
+#acquisition {
   padding-bottom: 80px;
 }
-.acquisition .temp_block {
+#acquisition .temp_block {
   height: 140px;
   background: lavender;
 }
