@@ -82,6 +82,8 @@ header a {
   height: 320px;
   margin: 0 auto;
   background: gray;
+  background: url(../images/guernica.jpg);
+  background-size: auto 100%;
 }
 .s-box {
   position: absolute;
