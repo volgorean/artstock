@@ -10,7 +10,7 @@ nav {
   z-index: 500;
 }
 nav .h-link {
-  flex-grow: 0;
+  flex: 0 0 auto;
   margin: 15px 0;
   margin-left: 40px;
   font: 200 14px/30px 'Open Sans', sans-serif;
@@ -226,6 +226,7 @@ header a {
 }
 .sharing .points .col .icon {
   flex: 0 0 120px;
+  max-width: 120px;
   height: 120px;
   margin: 0 10px;
   padding: 25px;
