@@ -29,6 +29,9 @@ html, body {
   align-items: stretch;
   align-content: stretch;
 }
+.w {
+  flex-wrap: wrap;
+}
 .r {
   flex-direction: row;
 }
@@ -60,10 +63,16 @@ html, body {
   font: 500 13px/16px 'Montserrat', sans-serif;
   list-style-type: circle;
 }
-section, header, footer {
+section , header, footer {
   width: 100%;
-  padding: 80px 160px;
+  padding: 80px 0;
   background: lightgray;
+}
+.flex-shrink {
+  width: 1060px;
+  max-width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 section h1 {
   padding-bottom: 30px;
@@ -90,4 +99,41 @@ header .temp_block {
 .wide .graphic {
   display: block;
   width: 100%;
+}
+@media (max-width: 840px) {
+  .break-v {
+    width: 620px;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .break-v > .split {
+    flex: 0 0 100%;
+    border: none !important;
+  }
+  .break-v > .split > .split-inner {
+    padding: 0 !important;
+  }
+  .break-v > .split-q {
+    flex: 0 0 100%;
+  }
+  .break-v > .split-q:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .break-v > .col:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .break-v > .split-q:first-child {
+    padding-right: 0;
+  }
+  .flex-shrink > h1 {
+    text-align: center;
+  }
+  .flex-shrink > h4 {
+    padding-right: 0;
+    text-align: center;
+  }
+  .flex-shrink > p {
+    text-align: center;
+  }
 }
