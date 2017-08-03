@@ -135,3 +135,13 @@ section h1 {
     border-radius: 3px;
   }
 }
+
+/***********************/
+/* dropshadow title */
+/***********************/
+
+h2.s-title {
+  text-align: center;
+  text-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+  padding-bottom: 80px;
+}

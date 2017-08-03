@@ -1,0 +1,19 @@
+- date: NOW
+  stage: Alpha testing
+
+- date: October 1, 2017
+  stage: Closed Beta
+  link: link
+  link_text: becoming a beta tester
+
+- date: December 1, 2017
+  stage: Open Public Beta 
+
+- date: Feb 1, 2018
+  stage: Version 1.0 Launch
+
+- date: July 2018
+  stage: Version 2.0 Launch
+
+- date: September 2018
+  stage: Version 3.0 Launch
