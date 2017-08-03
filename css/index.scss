@@ -83,23 +83,6 @@
 /* open market section */
 /***********************/
 
-.new_split {
-  column-count: 2;
-  column-gap: 80px;
-
-  > div {
-    break-inside: avoid;
-  }
-
-  @media(max-width: 640px) {
-    column-count: 1;
-
-    > div:not(:last-child) {
-      padding-bottom: 40px;
-    }
-  }
-}
-
 .open_market {
   h4 {
     padding-bottom: 25px;

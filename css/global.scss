@@ -3,6 +3,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:100,200,300,400,500,600,700,800,900');
 
+
+/****************************/
+/* element presets          */
+/****************************/
+
+
 * {
   position: relative;
   margin: 0;
@@ -43,6 +49,25 @@ textarea {
   padding: 5px;
 }
 
+section , header, footer {
+  width: 100%;
+  padding: 80px 0;
+}
+section h1 {
+  padding-bottom: 30px;
+  text-align: left;
+  font: 800 40px/40px 'Montserrat', sans-serif;
+}
+.temp_block {
+  width: 100%;
+  height: 280px;
+  background: lightgray;
+}
+
+/****************************/
+/* flexbox presets          */
+/****************************/
+
 /* flex item */
 .flexi-i {
   flex: 1 1;
@@ -56,100 +81,43 @@ textarea {
   align-items: stretch;
   align-content: stretch;
 }
-.w {
-  flex-wrap: wrap;
-}
-.r {
-  flex-direction: row;
-}
+.w { flex-wrap: wrap; }
+.r { flex-direction: row; }
 
+/****************************/
+/* primary section wrapper  */
+/****************************/
 
-.split-q {
-  flex: 0 0 50%;
-}
-.split-q:first-child {
-  padding-right: 60px;
-}
-.split-q h5 {
-  font: 800 18px/20px 'Montserrat', sans-serif;
-  padding-bottom: 15px;
-  color: gray;
-}
-.split-q p {
-  font: 500 13px/16px 'Montserrat', sans-serif;
-  padding-bottom: 5px;
-}
-.split-q ul {
-  padding-left: 20px;
-  padding-bottom: 5px;
-}
-.split-q li {
-  font: 500 13px/16px 'Montserrat', sans-serif;
-  list-style-type: circle;
-}
-section , header, footer {
-  width: 100%;
-  padding: 80px 0;
-}
 .flex-shrink {
   width: 1060px;
   max-width: 100%;
   padding: 0 15px;
   margin: 0 auto;
-}
-section h1 {
-  padding-bottom: 30px;
-  text-align: left;
-  font: 800 40px/40px 'Montserrat', sans-serif;
-}
-.temp_block {
-  width: 100%;
-  height: 280px;
-  background: lightgray;
+
+  @media (max-width: 840px) {
+    > h1, > h4, > p, > a { text-align: center; }
+    > h4 { padding-right: 0; }
+  }
 }
 
 /***********************/
-/* vertical break points */
+/* two col split       */
 /***********************/
 
-@media (max-width: 840px) {
-  .break-v {
-    width: 620px;
-    max-width: 100%;
-    margin: 0 auto;
-    flex-direction: column;
+.new_split {
+  column-count: 2;
+  column-gap: 80px;
+
+  > div {
+    break-inside: avoid;
   }
-  .break-v > .split {
-    flex: 0 0 100%;
-    border: none !important;
-  }
-  .break-v > .split > .split-inner {
-    padding: 0 !important;
-  }
-  .break-v > .split-q {
-    flex: 0 0 100%;
-  }
-  .break-v > .split-q:not(:last-child) {
-    margin-bottom: 20px;
-  }
-  .break-v > .col:not(:last-child) {
-    margin-bottom: 20px;
-  }
-  .break-v > .split-q:first-child {
-    padding-right: 0;
-  }
-  .flex-shrink > h1 {
-    text-align: center;
-  }
-  .flex-shrink > h4 {
-    padding-right: 0;
-    text-align: center;
-  }
-  .flex-shrink > p {
-    text-align: center;
-  }
-  .flex-shrink > a {
-    text-align: center;
+
+  @media(max-width: 640px) {
+    column-count: 1;
+
+    > div:not(:last-child) {
+      padding-bottom: 40px;
+    }
   }
 }
 
