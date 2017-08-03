@@ -1,3 +1,6 @@
+---
+---
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:100,200,300,400,500,600,700,800,900');
 
 * {
@@ -13,9 +16,17 @@ html, body {
   width: 100%;
   height: 100vh;
   color: #222222;
-  background: #FEFEFA;
+  background: #F8F8F8;
   overflow-x: hidden;
 }
+h1 { font: 800 40px/42px 'Montserrat', sans-serif; }
+h2 { font: 700 32px/34px 'Montserrat', sans-serif; }
+h3 { font: 600 20px/24px 'Montserrat', sans-serif; }
+h4 { font: 600 18px/22px 'Montserrat', sans-serif; }
+h5 { font: 600 16px/20px 'Montserrat', sans-serif; }
+li { font: 500 14px/20px 'Open Sans', sans-serif; }
+p { font: 500 14px/20px 'Open Sans', sans-serif; }
+
 /* flex item */
 .flexi-i {
   flex: 1 1;
@@ -35,11 +46,8 @@ html, body {
 .r {
   flex-direction: row;
 }
-.middle {
-  width: 1360px;
-  max-width: 100%;
-  margin: 0 auto;
-}
+
+
 .split-q {
   flex: 0 0 50%;
 }
@@ -66,12 +74,11 @@ html, body {
 section , header, footer {
   width: 100%;
   padding: 80px 0;
-  background: lightgray;
 }
 .flex-shrink {
   width: 1060px;
   max-width: 100%;
-  padding: 0 10px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 section h1 {
@@ -84,22 +91,11 @@ section h1 {
   height: 280px;
   background: lightgray;
 }
-header .temp_block {
-  background: gray;
-}
-.wide h4 {
-  font: 500 18px/24px 'Montserrat', sans-serif;
-  padding-right: 80px;
-  padding-bottom: 15px;
-  color: gray;
-}
-.wide .temp_block {
-  background: darkgray;
-}
-.wide .graphic {
-  display: block;
-  width: 100%;
-}
+
+/***********************/
+/* vertical break points */
+/***********************/
+
 @media (max-width: 840px) {
   .break-v {
     width: 620px;
@@ -135,5 +131,76 @@ header .temp_block {
   }
   .flex-shrink > p {
     text-align: center;
+  }
+}
+
+/***********************/
+/* hline split */
+/***********************/
+
+.h-line {
+  > div {
+    margin: 0 auto;
+    width: 600px;
+    max-width: calc(100% - 20px);
+    height: 4px;
+    background: lightgray;
+    border-radius: 3px;
+  }
+}
+
+/***********************/
+/* multi-step boxes */
+/***********************/
+
+.steps {
+  column-count: 4;
+  column-gap: 20px;
+
+  > .step {
+    break-inside: avoid;
+    border-radius: 5px;
+    background: white;
+    margin-bottom: 25px;
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.1);
+
+    .graphic {
+      width: 100%;
+      border-radius: 5px;
+    }
+    .label {
+      width: 100%;
+      line-height: 50px;
+      text-align: center;
+      background: black;
+      color: white;
+    }
+    .text {
+      padding: 25px;
+    }
+  }
+  > .step:not(:last-child) {
+    .label::after {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      right: -5px;
+      top: calc(50% - 5px);
+      background: black;
+      transform: rotate(45deg);
+    }
+    @media(max-width: 960px) { .label::after { display: none; }}
+  }
+  @media(max-width: 960px) {
+    column-count: 2;
+
+    width: 540px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  @media(max-width: 480px) {
+    column-count: 1;
+    width: 300px;
   }
 }

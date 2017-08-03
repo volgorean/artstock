@@ -1,0 +1,294 @@
+---
+---
+
+.home {
+  padding-bottom: 0;
+  // background: lightgray;
+  background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+
+  .intro {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 80px 0;
+    padding-top: 30px;
+    text-align: center;
+
+    h2 {
+      font: 400 34px/40px 'Montserrat', sans-serif;
+    }
+    p {
+      font: 400 16px/22px 'Montserrat', sans-serif;
+      text-align: center;
+      color: #333B3B;
+    }
+    @media(max-width: 640px) {
+      h2 { font: 400 28px/34px 'Montserrat', sans-serif; }
+      p { font: 400 12px/18px 'Montserrat', sans-serif; }
+    }
+    @media(max-width: 340px) {
+      h2 { font: 400 22px/28px 'Montserrat', sans-serif; }
+      p { font: 400 10px/14px 'Montserrat', sans-serif; }
+    }
+  }
+  > .flex-shrink { z-index: 400; }
+
+  #video {
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: gray;
+  }
+  #video:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%;
+  }
+  .gradient {
+    width: 100%;
+    height: 100px;
+    margin-top: -80px;
+    border-top: 1px solid lightgray;
+    background: linear-gradient(to bottom, lightgray, #F8F8F8);
+  }
+}
+
+
+/***********************/
+/* logos section */
+/***********************/
+
+#logos {
+  width: 100%;
+  padding: 20px 0;
+
+  .flexi-i {
+    padding: 0 10px;
+  }
+  .t-logo {
+    width: 100%;
+    max-width: 180px;
+    height: 40px;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(100%);
+    background-image: url(../images/paypal.png);
+  }
+  .t-logo.paypal { background-image: url(../images/paypal.png); }
+}
+
+/***********************/
+/* open market section */
+/***********************/
+
+.new_split {
+  column-count: 2;
+  column-gap: 80px;
+
+  > div {
+    break-inside: avoid;
+  }
+
+  @media(max-width: 640px) {
+    column-count: 1;
+
+    > div:not(:last-child) {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.open_market {
+  h4 {
+    padding-bottom: 25px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    list-style: circle;
+    padding-bottom: 5px;
+  }
+
+  .new_split {
+    > div {
+      break-inside: avoid;
+
+      .bar {
+        margin-bottom: 20px;
+        padding-left: 20px;
+
+        background: url(../images/wormz.png);
+
+        .icon {
+          left: -5px;
+          width: 70px;
+          height: 70px;
+          background: #F8F8F8; //#F2F2F2
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+/***********************/
+/* sharing section */
+/***********************/
+
+.sharing {
+  h2 {
+    text-align: center;
+    padding-bottom: 80px;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+  }
+  h4 {
+    padding-bottom: 25px;
+  }
+  .new_split {
+    background: white;
+    border-bottom: 3px solid lightgray;
+    border-radius: 3px;
+    padding: 120px 60px;
+    text-align: center;
+
+    @media(max-width: 640px) { padding: 100px 60px; }
+
+    .v-line {
+      position: absolute;
+      top: calc(50% - 40px);
+      left: calc(50% - 2px);
+      width: 4px;
+      height: 80px;
+      background: lightgray;
+      border-radius: 3px;
+
+      @media(max-width: 640px) { display: none; }
+    }
+  }
+}
+
+/***********************/
+/* advisors section */
+/***********************/
+
+.advisors {
+}
+.advisor {
+  flex: 0 0 50%;
+  padding-bottom: 30px;
+}
+@media(min-width: 440px) {.advisor {flex: 0 0 50%;}}
+@media(min-width: 660px) {.advisor {flex: 0 0 33.3333%;}}
+@media(min-width: 880px) {.advisor {flex: 0 0 25%;}}
+
+.advisor > * {
+  margin: 0 auto;
+  max-width: 140px;
+}
+.advisor .img_placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: gray;
+  margin-bottom: 10px;
+}
+.advisor h5 {
+  font: 700 16px/24px 'Montserrat', sans-serif;
+}
+.advisor p {
+  font: 500 12px/14px 'Montserrat', sans-serif;
+  color: gray;
+}
+
+/***********************/
+/* call to action section */
+/***********************/
+
+#call_to_action {
+  padding: 0;
+  margin-top: -80px;
+  z-index: 400;
+}
+.call_to_action {
+  width: 1060px;
+  max-width: calc(100% - 40px);
+  bottom: -80px;
+  margin: 0 auto;
+  padding: 80px;
+  border-radius: 3px;
+  background: white;
+  border-bottom: 3px solid lightgray;
+}
+.call_to_action .split:first-child {
+  border-right: 1px solid lightgray;
+}
+.call_to_action .split .split-inner {
+  width: 100%;
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+  padding-left: 40px;
+}
+.call_to_action .split:first-child .split-inner {
+  padding-left: 0;
+  padding-right: 40px;
+}
+.call_to_action h3 {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  margin-top: 75px;
+  font: 600 24px/28px 'Montserrat', sans-serif;
+  text-align: center;
+}
+.call_to_action label {
+  font: 700 16px/20px 'Montserrat', sans-serif;
+  color: gray;
+}
+.call_to_action input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font: 500 18px/32px 'Open Sans', sans-serif;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+.call_to_action .checkbox {
+  height: 32px;
+  width: 100%;
+  margin-bottom: 10px;
+  background: lightgray;
+  overflow: hidden;
+}
+.call_to_action .checkbox input {
+  flex: 0 0 32px;
+  height: 20px;
+  padding: 0px;
+  margin: 6px;
+}
+.call_to_action .checkbox p {
+  flex: 1 1;
+  font: 500 18px/32px 'Open Sans', sans-serif;
+}
+@media(max-width: 980px) {
+  .call_to_action {
+    padding: 80px 20px;
+  }
+}
+@media(max-width: 840px) {
+  .call_to_action {
+    padding: 80px;
+  }
+  .call_to_action h3 {
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+}
+@media(max-width: 620px) {
+  .call_to_action {
+    padding: 40px;
+  }
+}
+

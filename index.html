@@ -1,267 +1,123 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: default
+title: Artstock Exchange
+---
 
-    <title>Artstock Exchange</title>
+<header class="home">
+  <div class="flex-shrink">
+    <div class="intro">
+      <h2>Owners get liquidity.</h2>
+      <h2>Investors get to own a picasso.</h2>
+      <p>Artstock Exchange is an open market place for art owners to make an APO and offer shares of their art to investors for shared ownership and stuff.</p>
+    </div>
 
-    <link rel="stylesheet" type="text/css" href="css/global.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-  </head>
+    <div id="video">
+      
+    </div>    
+  </div>
 
-  <body>
-    <div class="middle">
-      <nav>
-        <div class="flex-shrink flexi-c r">
-          <a href="index.html" class="flexi-i" id="logo"></a>
+  <div class="gradient"></div>
+</header>
 
-          <a href="tech.html" class="flexi-i h-link">TECH</a>
-          <a href="roadmap.html" class="flexi-i h-link">ROADMAP</a>
-          <a href="faq.html" class="flexi-i h-link">FAQ</a>
-          <a href="contact.html" class="flexi-i h-link h-button">Contact!</a>
+<section id="logos">
+  <div class="flex-shrink flexi-c r">
+    <div class="flexi-i"><div class="t-logo"></div></div>
+    <div class="flexi-i"><div class="t-logo"></div></div>
+    <div class="flexi-i"><div class="t-logo"></div></div>
+    <div class="flexi-i"><div class="t-logo paypal"></div></div>
+  </div>
+</section>
+
+<section class="open_market">
+  <div class="flex-shrink new_split">
+    <div>
+      <div class="bar">
+        <img class="icon" src="images/conversation.svg"></img>
+      </div>
+      <h4>Transparency</h4>
+
+      <p>Health goth trust fund post-ironic biodiesel offal. Copper mug lyft YOLO, pitchfork raw denim williamsburg subway tile health goth umami kinfolk kale chips normcore post-ironic palo santo narwhal. Salvia dreamcatcher tofu shaman ugh.</p>
+    </div>
+
+    <div>
+      <div class="bar">
+        <img class="icon" src="images/conversation.svg"></img>
+      </div>
+      <h4>Lowering barriers to entry</h4>
+
+      <p>Health goth trust fund post-ironic biodiesel offal. Copper mug lyft YOLO, pitchfork raw denim williamsburg subway tile health goth umami kinfolk kale chips normcore post-ironic palo santo narwhal. Salvia dreamcatcher tofu shaman ugh.</p>
+    </div>
+  </div>
+</section>
+
+<div class="h-line"><div></div></div>
+
+<section class="sharing">
+  <div class="flex-shrink">
+    <h2>Sharing the Value of Art</h2>
+
+    <div class="new_split">
+      <div class="v-line"></div>
+
+      <div class="left">
+        <h4>Commercial Value</h4>
+        <p>Health goth trust fund post-ironic biodiesel offal. Copper mug lyft YOLO, pitchfork raw denim williamsburg subway tile health goth ninja man eats cake.</p>
+      </div>
+
+      <div>
+        <h4>Social Value</h4>
+        <p>Health goth trust fund post-ironic biodiesel offal. Copper mug lyft YOLO, pitchfork raw denim williamsburg subway tile health goth ninja man eats cake.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="advisors">
+  <div class="flex-shrink">
+    <h1>Team</h1>
+
+    <div class="flexi-c w r">
+      {% for m in site.data.team %}
+        <div class="flexi-i advisor">
+          <div class="img_placeholder"></div>
+          <h5>{{m.name}}</h5>
+          <p>{{m.role}}</p>
         </div>
-      </nav>
-      <div class="nav_spacer"></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-      <header class="home">
-        <div class="flex-shrink">
-          <div class="intro">
-            <h2>Owners get liquidity.</h2>
-            <h2>Investors get to own a picasso.</h2>
-            <p>Artstock Exchange is an open market place for art owners to make an APO and offer shares of their art to investors for shared ownership and stuff.</p>
+<section id="call_to_action">
+  <div class="call_to_action">
+    <div class="flexi-c r break-v">
+      <div class="flexi-i split">
+        <div class="split-inner">
+          <h3>Excited yet? Subscribe to our newsletter and we'll keep you updated.</h3>
+        </div>
+      </div>
+
+      <form class="flexi-i split">
+        <div class="split-inner">
+          <label>I'm Interested In...</label>
+          <div class="flexi-c r checkbox">
+            <input class="flexi-i" type="checkbox"></input>
+            <p class="flexi-i">Investing in Art.</p>
+          </div>
+          <div class="flexi-c r checkbox">
+            <input class="flexi-i" type="checkbox"></input>
+            <p class="flexi-i">Listing my Art.</p>
+          </div>
+          <div class="flexi-c r checkbox">
+            <input class="flexi-i" type="checkbox"></input>
+            <p class="flexi-i">Investing in Artstock Exchange.</p>
           </div>
 
-          <div class="splash">
-            <div class="s-box i"></div>
-            <div class="s-box ix"></div>
-            <div class="s-box ixi"></div>
-            <div class="s-box ii"></div>
-            <div class="s-box xx"></div>
-            <div class="s-box xxi"></div>
-          </div>
+          <label>Email</label>
+          <input placeholder="abc@testing.com"></input>
+          <input type="submit" value="Sign Me Up!"></input>
         </div>
-      </header>
-
-      <section id="logos">
-        <div class="flex-shrink flexi-c r">
-          <div class="flexi-i"><div class="t-logo"></div></div>
-          <div class="flexi-i"><div class="t-logo"></div></div>
-          <div class="flexi-i"><div class="t-logo"></div></div>
-          <div class="flexi-i"><div class="t-logo paypal"></div></div>
-        </div>
-      </section>
-
-      <section class="open_market">
-        <div class="flex-shrink">
-          <div class="flexi-c r break-v">
-            <div class="flexi-i split-q">
-              <h5>The need for an open market</h5>
-
-              <p>In a world of misinformation and miscommunication Artstock challenges the norm by taking transparency to the next level.</p>
-
-              <ul>
-                <li>Realtime Price Transparency</li>
-                <li>Verifiable Ownership History</li>
-                <li>Open Unbiased Information</li>
-                <li>Complete Fee Transparency</li>
-              </ul>
-
-              <p>This means Trust and Accounability are built into Artstock so you can be confident we have your best interests at heart!</p>
-            </div>
-
-            <div class="flexi-i split-q">
-              <h5>Lowering barriers to entry</h5>
-
-              <div class="stats_block">
-                <div class="flexi-c r flexi-i stat">
-                  <div class="icon"></div>
-
-                  <div class="flexi-i">
-                    <h3>No more waiting</h3>
-                    <p>The average artwork takes aproximatly a year to sell and cant be re-listed for another year.</p>
-                  </div>
-                </div>
-
-                <div class="flexi-c r flexi-i stat">
-                  <div class="icon"></div>
-
-                  <div class="flexi-i">
-                    <h3>Art at any budget</h3>
-                    <p>Own a picasso for as little as $10. Fine art has never been more accessable, encouraging participation, growing the market.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="sharing">
-        <div class="flex-shrink">
-          <h1>Sharing the Value of Art</h1>
-          <h4>Artstock shares the value of art with society! Bringing the community together owners get a better way to manage their collection and the people access to great works.</h4>
-
-          <div class="flexi-c r points break-v">
-            <div class="flexi-c r flexi-i col">
-              <div class="icon">
-                <img src="images/conversation.svg">
-              </div>
-
-              <div class="flexi-i text">
-                <h3>Social Value</h3>
-                <p>Sharing the social value of art by bringing art out into the open.</p>
-              </div>
-            </div>
-
-            <div class="flexi-c r flexi-i col">
-              <div class="icon">
-                <img src="images/conversation.svg">
-              </div>
-
-              <div class="flexi-i text">
-                <h3>Commercial Value</h3>
-                <p>Sharing the Commercial value of art by producing high market participation.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="advisors">
-        <div class="flex-shrink">
-          <h1>Team</h1>
-
-          <div class="flexi-c w r">
-            <div class="flexi-i advisor">
-              <div class="img_placeholder"></div>
-              <h5>Terry Wilkinson</h5>
-              <p>CEO</p>
-            </div>
-
-            <div class="flexi-i advisor">
-              <div class="img_placeholder"></div>
-              <h5>Samuel Suh, JD</h5>
-              <p>Product Manager</p>
-            </div>
-
-            <div class="flexi-i advisor">
-              <div class="img_placeholder"></div>
-              <h5>Karen Gutfreund</h5>
-              <p>Art Director</p>
-            </div>
-
-            <div class="flexi-i advisor">
-              <div class="img_placeholder"></div>
-              <h5>Bezalel Lim</h5>
-              <p>CTO</p>
-            </div>
-
-            <div class="flexi-i advisor">
-              <div class="img_placeholder"></div>
-              <h5>John Smith</h5>
-              <p>Ninja Superstar Expert</p>
-            </div>
-
-            <div class="flexi-i advisor">
-              <div class="img_placeholder"></div>
-              <h5>John Smith</h5>
-              <p>Ninja Superstar Expert</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="call_to_action">
-        <div class="call_to_action">
-          <div class="flexi-c r break-v">
-            <div class="flexi-i split">
-              <div class="split-inner">
-                <h3>Excited yet? Subscribe to our newsletter and we'll keep you updated.</h3>
-              </div>
-            </div>
-
-            <form class="flexi-i split">
-              <div class="split-inner">
-                <label>I'm Interested In...</label>
-                <div class="flexi-c r checkbox">
-                  <input class="flexi-i" type="checkbox"></input>
-                  <p class="flexi-i">Investing in Art.</p>
-                </div>
-                <div class="flexi-c r checkbox">
-                  <input class="flexi-i" type="checkbox"></input>
-                  <p class="flexi-i">Listing my Art.</p>
-                </div>
-                <div class="flexi-c r checkbox">
-                  <input class="flexi-i" type="checkbox"></input>
-                  <p class="flexi-i">Investing in Artstock Exchange.</p>
-                </div>
-
-                <label>Email</label>
-                <input placeholder="abc@testing.com"></input>
-                <input type="submit" value="Sign Me Up!"></input>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <div class="flex-shrink">
-          <div class="flexi-c r w">
-            <div class="flexi-i">
-              <a href="index.html" id="logo"></a>
-              <p>© 2017 Artstock Exchange</p>
-            </div>
-
-            <div class="flexi-i">
-              <ul class="sec">
-                <h5><span class="pin"></span> Palo Alto</h5>
-
-                <li><a href="#">Artstock Exchange</a></li>
-                <li>1755 University Ave.</li>
-                <li>Palo Alto, CA 94301</li>
-
-                <li>contact@artstockx.com</li>
-              </ul>
-            </div>
-
-            <div class="flexi-i">
-              <ul class="sec">
-                <h5>Company</h5>
-
-                <li>Blog</li>
-                <li>Github</li>
-                <li>Facebook</li>
-                <li>Twitter</li>
-              </ul>
-            </div>
-
-
-            <div class="flexi-i">
-              <ul class="sec">
-                <h5>Resources</h5>
-
-                <li>Blog</li>
-                <li>Github</li>
-                <li>Facebook</li>
-                <li>Twitter</li>
-              </ul>
-            </div>
-
-            <div class="flexi-i">
-              <ul class="sec">
-                <h5>Social</h5>
-
-                <li>Blog</li>
-                <li>Github</li>
-                <li>Facebook</li>
-                <li>Twitter</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-  </body>
-</html>
+      </form>
+    </div>
+  </div>
+</section>

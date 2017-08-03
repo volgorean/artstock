@@ -1,0 +1,35 @@
+---
+---
+
+.faq {
+  h2 {
+    padding-bottom: 30px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    list-style: circle;
+    padding-bottom: 5px;
+  }
+  .sidebar {
+    flex: 0 1 180px;
+
+    a {
+      color: gray;
+    }
+  }
+  @media(max-width: 740px) { .sidebar { display: none; } }
+
+  .qna {
+    max-width: 720px;
+    padding-bottom: 25px;
+
+    h5 {
+      padding-bottom: 5px;
+    }
+    p {
+      padding-bottom: 5px;
+    }
+  }
+}

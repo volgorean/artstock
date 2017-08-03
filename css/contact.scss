@@ -1,0 +1,70 @@
+---
+---
+
+.contact {
+  background: lightgray;
+}
+.contact h2 {
+  font: 700 24px/32px 'Montserrat', sans-serif;
+  padding-bottom: 20px;
+  color: gray;
+}
+.contact .sidebar {
+  flex: 0 0 320px;
+}
+.contact .sidebar ul {
+  padding-bottom: 15px;
+}
+.contact .sidebar h4 {
+  font: 700 16px/20px 'Montserrat', sans-serif;
+}
+.contact .sidebar li {
+  padding-left: 15px;
+  font: 500 14px/20px 'Montserrat', sans-serif;
+}
+.contact form {
+
+}
+.contact form .left {
+  padding-right: 5px;
+}
+.contact form .right {
+  padding-left: 5px;
+}
+.contact form .right input {
+  margin-top: 20px;
+}
+.contact label {
+  font: 700 16px/20px 'Montserrat', sans-serif;
+  color: gray;
+}
+.contact input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font: 500 18px/32px 'Open Sans', sans-serif;
+  padding-left: 5px;
+  margin-bottom: 15px;
+}
+.contact textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  font: 500 18px/32px 'Open Sans', sans-serif;
+  padding-left: 5px;
+  margin-bottom: 15px;
+}
+@media(max-width: 920px) {
+  .contact .sidebar {
+    flex: 0 0 220px;
+  }
+}
+@media(max-width: 680px) {
+  .contact .sidebar {
+    min-width: 100%;
+    text-align: center;
+  }
+  .contact h2 {
+    text-align: center;
+  }
+}
