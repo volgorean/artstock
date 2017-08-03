@@ -1,0 +1,17 @@
+# should be 4 steps
+
+- label: REQUEST
+  graphic: images/step_graphic.png
+  text: Upon receiving the listing request, the art is reviewed for its authentication, conditions, and adequacy
+
+- label: VALUE
+  graphic: images/step_graphic.png
+  text: Determine the art's adequate offering price, number of shares to be issued, proper insurance measures, and the location for exhibition
+
+- label: PLEDGE
+  graphic: images/step_graphic.png
+  text: Accept pledes for the shares by interested parties; if pledges outnumber shares offered, shares will be distributed either randomly or on a first-come-first-serve basis
+
+- label: APO
+  graphic: images/step_graphic.png
+  text: Move the art into a publicly available open space, to complete the APO process. Art shares are distributed which can then be traded on the exchange

@@ -26,7 +26,7 @@ title: Tech
     </div>
 
     <div class="flexi-c r">
-      <a href="#evaluation" class="flexi-i">Evaluation</a>
+      <a href="#valuation" class="flexi-i">Valuation</a>
       <a href="#winwin" class="flexi-i">Win/Win</a>
     </div>
   </div>
@@ -56,42 +56,20 @@ title: Tech
 
 <div class="h-line"><div></div></div>
 
-<section id="evaluation">
+<section id="valuation">
   <div class="flex-shrink">
-    <h2>Fair and open Evaluation</h2>
+    <h2>Fair and open Valuation</h2>
 
     <div class="steps">
-      <div class="step">
-        <img src="images/step_graphic.png" class="graphic">
-        <h4 class="label">LABEL</h4>
-        <div class="text">
-          <p>Upon recieving the listing request, the art is reviewed for its authentication, conditions, and adequacy</p>
+      {% for s in site.data.valuation %}
+        <div class="step">
+          <img src="{{s.graphic}}" class="graphic">
+          <h4 class="label">{{s.label}}</h4>
+          <div class="text">
+            <p>{{s.text}}</p>
+          </div>
         </div>
-      </div>
-
-      <div class="step">
-        <img src="images/step_graphic.png" class="graphic">
-        <h4 class="label">LABEL</h4>
-        <div class="text">
-          <p>Upon recieving the listing request, the art is reviewed for its authentication, conditions, and adequacy</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <img src="images/step_graphic.png" class="graphic">
-        <h4 class="label">LABEL</h4>
-        <div class="text">
-          <p>Upon recieving the listing request, the art is reviewed for its authentication, conditions, and adequacy</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <img src="images/step_graphic.png" class="graphic">
-        <h4 class="label">LABEL</h4>
-        <div class="text">
-          <p>Upon recieving the listing request, the art is reviewed for its authentication, conditions, and adequacy</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -125,37 +103,15 @@ title: Tech
     <h2>Win/Win for buyers and sellers</h2>
 
     <div class="steps">
-      <div class="step">
-        <img src="images/step_graphic.png" class="graphic">
-        <h4 class="label">LABEL</h4>
-        <div class="text">
-          <p>Upon recieving the listing request, the art is reviewed for its authentication, conditions, and adequacy</p>
+      {% for s in site.data.winwin %}
+        <div class="step">
+          <img src="{{s.graphic}}" class="graphic">
+          <h4 class="label">{{s.label}}</h4>
+          <div class="text">
+            <p>{{s.text}}</p>
+          </div>
         </div>
-      </div>
-
-      <div class="step">
-        <img src="images/step_graphic.png" class="graphic">
-        <h4 class="label">LABEL</h4>
-        <div class="text">
-          <p>Upon recieving the listing request, the art is reviewed for its authentication, conditions, and adequacy</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <img src="images/step_graphic.png" class="graphic">
-        <h4 class="label">LABEL</h4>
-        <div class="text">
-          <p>Upon recieving the listing request, the art is reviewed for its authentication, conditions, and adequacy</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <img src="images/step_graphic.png" class="graphic">
-        <h4 class="label">LABEL</h4>
-        <div class="text">
-          <p>Upon recieving the listing request, the art is reviewed for its authentication, conditions, and adequacy</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

@@ -1,0 +1,17 @@
+# should be 4 steps
+
+- label: OFFER
+  graphic: images/step_graphic.png
+  text: Upon recieving the listing request, the art is reviewed for its authentication, conditions, and adequacy
+
+- label: VOTE
+  graphic: images/step_graphic.png
+  text: During a voting period, shareholders vote within the artstock exchange system to approve or disapprove the sale
+
+- label: DISTRIBUTE
+  graphic: images/step_graphic.png
+  text: If the acquisition is approved, shareholders share the proceeds 
+
+- label: DELIVER
+  graphic: images/step_graphic.png
+  text: Artwork is delivered to the buyer

@@ -23,10 +23,10 @@
 }
 
 /***********************/
-/* evaluation section */
+/* valuation section */
 /***********************/
 
-#evaluation {
+#valuation {
   h2 {
     text-align: center;
     padding-bottom: 80px;
@@ -90,7 +90,7 @@
     padding-bottom: 80px;
     text-shadow: 2px 4px 10px rgba(0,0,0,0.1);
   }
-  
+
   .temp_block {
     height: 140px;
     background: lavender;
@@ -126,6 +126,7 @@
     }
     .text {
       padding: 25px;
+      min-height: 160px;
     }
   }
   > .step:not(:last-child) {
