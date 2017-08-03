@@ -175,32 +175,38 @@
 /***********************/
 
 .advisors {
-}
-.advisor {
-  flex: 0 0 50%;
-  padding-bottom: 30px;
-}
-@media(min-width: 440px) {.advisor {flex: 0 0 50%;}}
-@media(min-width: 660px) {.advisor {flex: 0 0 33.3333%;}}
-@media(min-width: 880px) {.advisor {flex: 0 0 25%;}}
+  h2 {
+    text-align: center;
+    padding-bottom: 80px;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+  }
+  .advisor {
+    flex: 0 0 50%;
+    padding-bottom: 30px;
 
-.advisor > * {
-  margin: 0 auto;
-  max-width: 140px;
-}
-.advisor .img_placeholder {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: gray;
-  margin-bottom: 10px;
-}
-.advisor h5 {
-  font: 700 16px/24px 'Montserrat', sans-serif;
-}
-.advisor p {
-  font: 500 12px/14px 'Montserrat', sans-serif;
-  color: gray;
+    @media(min-width: 440px) {flex: 0 0 50%;}
+    @media(min-width: 660px) {flex: 0 0 33.3333%;}
+    @media(min-width: 880px) {flex: 0 0 25%;}
+
+    > * {
+      margin: 0 auto;
+      max-width: 140px;
+    }
+    .img_placeholder {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: gray;
+      margin-bottom: 10px;
+    }
+    h5 {
+      font: 700 16px/24px 'Montserrat', sans-serif;
+    }
+    p {
+      font: 500 12px/14px 'Montserrat', sans-serif;
+      color: gray;
+    }
+  }
 }
 
 /***********************/
