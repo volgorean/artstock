@@ -8,6 +8,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 collections:
 - faqs
 
+baseurl: /artstock
+
 sass:
   sass_dir: _sass
   # style: compressed/
