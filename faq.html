@@ -22,27 +22,43 @@ title: FAQ
 
         <ul>
           {% for c in categories %}
-            <li>
-              <a href="#category_{{c.name}}">{{ c.name | capitalize }}</a>
-            </li>
+            <li onclick="activeCase(this)" data-name="c_{{c.name | handleize}}">{{ c.name | capitalize }}</li>
           {% endfor %}
         </ul>
       </div>
 
-      <div class="flexi-i">
+      <div class="flexi-i" id="topics">
         {% for c in categories %}
-          <h2 id="category_{{c.name}}">{{ c.name | capitalize }}</h2>
 
-          {% for q in c.items %}
-            <div class="qna">
-              <h5>{{ q.question }}</h5>
-              
-              {{ q.content }}
-            </div>
-          {% endfor %}
+          {% if forloop.first == true %}
+          <div id="c_{{c.name | handleize}}" class="active">
+          {% else %}
+          <div id="c_{{c.name | handleize}}">
+          {% endif %}
+
+            <h2 id="category_{{c.name}}">{{ c.name | capitalize }}</h2>
+
+            {% for q in c.items %}
+              <div class="qna">
+                <h5>{{ q.question }}</h5>
+                
+                {{ q.content }}
+              </div>
+            {% endfor %}
+          </div>
         {% endfor %}
       </div>
 
     </div>
   </div>
 </section>
+
+<script type="text/javascript">
+  function activeCase(what) {
+    Array.from(document.getElementById("topics").children)
+    .forEach(function(text) {
+      text.classList.remove("active")
+    })
+    document.getElementById(what.dataset.name).classList.add("active")
+  }
+</script>

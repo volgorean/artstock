@@ -15,11 +15,20 @@
   .sidebar {
     flex: 0 1 180px;
 
-    a {
+    li {
       color: gray;
     }
   }
   @media(max-width: 740px) { .sidebar { display: none; } }
+
+  #topics {
+    > div {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+  }
 
   .qna {
     max-width: 720px;

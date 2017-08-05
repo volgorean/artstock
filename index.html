@@ -28,24 +28,86 @@ title: Artstock Exchange
   </div>
 </section>
 
-<section class="open_market">
-  <div class="flex-shrink split">
-    <div>
-      <div class="bar">
-        <img class="icon" src="images/conversation.svg"></img>
-      </div>
-      <h4>Transparency</h4>
+<section id="about">
+  <div class="flex-shrink">
+    <h2 class="s-title">Current art market is closed, and it needs to change.</h2>
 
-      <p>Health goth trust fund post-ironic biodiesel offal. Copper mug lyft YOLO, pitchfork raw denim williamsburg subway tile health goth umami kinfolk kale chips normcore post-ironic palo santo narwhal. Salvia dreamcatcher tofu shaman ugh.</p>
+    <p>Lack of transparency on art’s price determination and distribution channel, and on information’s basis makes the market very difficult to trust.</p>
+    <p>Perception of art being a luxury good discourages market participation and expansion.</p>
+  </div>
+</section>
+
+<section id="concept">
+  <div class="flex-shrink">
+    <h2 class="s-title">Stock Exchange for Artworks' Shares</h2>
+
+    <div class="quad">
+      <div class="v-line"></div>
+      <div class="v-line plus"></div>
+
+      <div class="block">
+        <img class="icon" src="images/conversation.svg"></img>
+        <p>Create shares of an artwork as if it’s a corporation</p>
+      </div>
+
+      <div class="block">
+        <img class="icon" src="images/conversation.svg"></img>
+        <p>List artwork through Art Public Offering (APO), like company stock IPOs ninjas too</p>
+      </div>
+
+      <div class="block">
+        <img class="icon" src="images/conversation.svg"></img>
+        <p>An exchange platform for the open trading of art shares, which allows a transparent, accurate valuation of art that reflects the market demand</p>
+      </div>
+
+      <div class="block">
+        <img class="icon" src="images/conversation.svg"></img>
+        <p>Open up the art market to be accessible to the public</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div>
-      <div class="bar">
-        <img class="icon" src="images/conversation.svg"></img>
+<section class="open_market">
+  <div class="flex-shrink">
+    <h2 class="s-title">A revolutionary solution, powered by state-of the-art technology</h2>
+
+    <div class="split">
+      <div>
+        <div class="bar">
+          <img class="icon" src="images/conversation.svg"></img>
+        </div>
+        <h4>Ethereum</h4>
+
+        <p>Using blockchain ensures data security and transparency, and Ethereum’s programmable smart contracts enable secured, 24/7 global trading.</p>
       </div>
-      <h4>Lowering barriers to entry</h4>
 
-      <p>Health goth trust fund post-ironic biodiesel offal. Copper mug lyft YOLO, pitchfork raw denim williamsburg subway tile health goth umami kinfolk kale chips normcore post-ironic palo santo narwhal. Salvia dreamcatcher tofu shaman ugh.</p>
+      <div>
+        <div class="bar">
+          <img class="icon" src="images/conversation.svg"></img>
+        </div>
+        <h4>AXOS</h4>
+
+        <p>Developed by Artstock Engineering Team, AXOS is a solution to Ethereum’s data scalability problems and cryptocurrency’s price instability</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="h-line"><div></div></div>
+
+<section class="advisors">
+  <div class="flex-shrink">
+    <h2 class="s-title">Team</h2>
+
+    <div class="flexi-c w r">
+      {% for m in site.data.team %}
+        <div class="flexi-i advisor">
+          <div class="img_placeholder"></div>
+          <h5>{{m.name}}</h5>
+          <p>{{m.role}}</p>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -67,54 +129,6 @@ title: Artstock Exchange
       <div>
         <h4>Social Value</h4>
         <p>Health goth trust fund post-ironic biodiesel offal. Copper mug lyft YOLO, pitchfork raw denim williamsburg subway tile health goth ninja man eats cake.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="advisors">
-  <div class="flex-shrink">
-    <h2 class="s-title">Team</h2>
-
-    <div class="flexi-c w r">
-      {% for m in site.data.team %}
-        <div class="flexi-i advisor">
-          <div class="img_placeholder"></div>
-          <h5>{{m.name}}</h5>
-          <p>{{m.role}}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section id="call_to_action">
-  <div class="call_to_action">
-    <div class="split">
-      <div class="v-line"></div>
-
-      <div class="left">
-        <h3>Excited yet? Subscribe to our newsletter and we'll keep you updated.</h3>
-      </div>
-
-      <div>
-        <label>I'm Interested In...</label>
-        <div class="flexi-c r checkbox">
-          <input class="flexi-i" type="checkbox"></input>
-          <p class="flexi-i">Investing in Art.</p>
-        </div>
-        <div class="flexi-c r checkbox">
-          <input class="flexi-i" type="checkbox"></input>
-          <p class="flexi-i">Listing my Art.</p>
-        </div>
-        <div class="flexi-c r checkbox">
-          <input class="flexi-i" type="checkbox"></input>
-          <p class="flexi-i">Investing in Artstock Exchange.</p>
-        </div>
-
-        <label>Email</label>
-        <input placeholder="abc@testing.com"></input>
-        <input type="submit" value="Sign Me Up!"></input>
       </div>
     </div>
   </div>
