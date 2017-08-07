@@ -5,7 +5,7 @@ title: Roadmap
 
 <header>
   <div class="flex-shrink">
-    <h1>Roadmap</h1>
+    <h1>Timeline </h1>
 
     <p>Where we're going.</p>
     <p>Where we've been.</p>
@@ -14,23 +14,20 @@ title: Roadmap
 
 <section id="roadmap">
   <div class="flex-shrink">
-    <h2 class="s-title">TESTAROOOO</h2>
 
-    {% for x in site.data.roadmap %}
-      <div class="stage">
-        <div>
-          <h5>{{x.date}}</h5>
-          <h4>{{x.stage}}</h4>
-        </div>
-        
-        {% if x.link %}
-          <div>
-            <a href="{{x.link}}">{{x.link_text}}</a>
+    <div class="stages">
+      <div class="line"></div>
+
+      {% for x in site.data.roadmap %}
+        <div class="stage">
+          <div class="circle"></div>
+
+          <div class="stage-content">
+            <h4>{{x.stage}}</h4>
+            <p>{{x.text}}</p>
           </div>
-        {% endif %}
-      </div>
-    {% endfor %}
-
-    <p>Learn more about the different Artstock Exchange versions. (linkto: pdf “Towards a Complete Open Market” </p>
+        </div>
+      {% endfor %}
+    </div>
   </div> 
 </section>

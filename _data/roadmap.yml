@@ -1,19 +1,14 @@
-- date: NOW
-  stage: Alpha testing
+- stage: Alpha Version
+  text: Buy, trade, and sell art shares according to the market supply and demand. View details about the artwork’s exhibition location, insurance, provenance, etc.
 
-- date: October 1, 2017
-  stage: Closed Beta
-  link: link
-  link_text: becoming a beta tester
+- stage: Beta Version
+  text: Incorporate APO structure, acquisition offer, voting process
 
-- date: December 1, 2017
-  stage: Open Public Beta 
+- stage: Version 1.0 (Launch)
+  text: Open Artstock Gallery to exhibit listed artworks. Establish art advisory committee to assist APO process.
 
-- date: Feb 1, 2018
-  stage: Version 1.0 Launch
+- stage: Version 2.0
+  text: Certified entities can directly perform APO. Exhibition tour of selected artworks on Artstock Exchange can be arranged. Establish regional Artstock Exchange branches, to handle localization of the service.
 
-- date: July 2018
-  stage: Version 2.0 Launch
-
-- date: September 2018
-  stage: Version 3.0 Launch
+- stage: Version 3.0
+  text: Artists can directly perform APO. Artist can also crowdfund his/her project plan within the system to pre-sell a portion of the new project’s ownership, in order to finance his/her next work.

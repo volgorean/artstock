@@ -36,7 +36,7 @@ label {
   font: 700 16px/20px 'Montserrat', sans-serif;
   color: gray;
 }
-input, textarea {
+input, textarea, select {
   width: 100%;
   border: none;
   outline: none;
@@ -45,9 +45,8 @@ input, textarea {
   margin-bottom: 10px;
   background: lightgray;
 }
-textarea {
-  padding: 5px;
-}
+select { height: 32px; }
+textarea { padding: 5px; }
 
 section , header, footer {
   width: 100%;

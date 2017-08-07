@@ -11,21 +11,68 @@ nav {
   background: #2c2c2c;
   z-index: 500;
 
+  a {
+    cursor: pointer;
+  }
+
   .h-link {
     flex: 0 0 auto;
-    margin: 15px 0;
-    margin-left: 40px;
-    font: 200 14px/30px 'Open Sans', sans-serif;
-    color: white;
-  }
-  .h-link.h-button {
-    padding: 0 20px;
-    margin-right: 10px;
-    border-radius: 3px;
-    font-weight: 600;
-    color: black;
-    text-shadow: 0 0 3px white;
-    background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+    padding: 15px 0;
+    cursor: pointer;
+
+    > a {
+      margin-left: 40px;
+      font: 200 14px/30px 'Open Sans', sans-serif;
+      color: white;
+    }
+    > a.h-button {
+      display: block;
+      padding: 0 20px;
+      margin-right: 10px;
+      border-radius: 3px;
+      font-weight: 600;
+      color: black;
+      text-shadow: 0 0 3px white;
+      background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+    }
+    .dropdown {
+      position: absolute;
+      top: 50px;
+      width: 120px;
+      left: calc(50% - 40px);
+      border-radius: 3px;
+      text-align: center;
+      background: #ecf0f1;
+      padding: 5px 0;
+      display: none;
+
+      li {
+        padding: 0;
+        width: 100%;
+        a {
+          text-align: center;
+          line-height: 22px;
+          color: #222222;
+        }
+        &:hover {
+          background: #bdc3c7;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: -5px;
+        left: calc(50% - 5px);
+        background: #ecf0f1;
+        transform: rotate(45deg);
+      }
+    }
+    &:hover > .dropdown {
+      display: block;
+    }
+    @media(max-width: 800px) { display: none; }
   }
   #logo {
     flex: 0 0 220px;
@@ -33,6 +80,36 @@ nav {
     margin-left: 0;
     margin-right: auto;
     background: gray;
+  }
+
+  #menu {
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+    cursor: pointer;
+    background: url(../images/menu.svg);
+    background-position: center;
+    background-size: 100%;
+    display: none;
+
+    @media(max-width: 800px) { display: flex; }
+  }
+}
+nav.open {
+  height: auto;
+
+  > div {
+    flex-direction: column;
+
+
+    #logo {
+      flex: 0 0 60px;
+    } 
+
+    .h-link {
+      display: block;
+      flex: 0 0 100%;
+    }
   }
 }
 .nav_spacer {

@@ -80,29 +80,27 @@
 }
 
 /***********************/
-/* about section       */
-/***********************/
-#about {
-  text-align: center;
-}
-/***********************/
 /* concept section     */
 /***********************/
 
 #concept {
   text-align: center;
+  padding-bottom: 0;
+
+  .s-title { padding-bottom: 40px; }
 
   .quad {
     background: white;
     border-bottom: 3px solid lightgray;
     border-radius: 3px;
-    padding: 60px 60px;
+    padding: 60px;
     text-align: center;
 
     column-count: 2;
     column-gap: 80px;
 
     padding-bottom: 30px;
+    margin-top: 60px;
 
     > .block {
       min-height: 160px;
@@ -129,11 +127,21 @@
       height: 80px;
       background: lightgray;
       border-radius: 3px;
-
-      @media(max-width: 640px) { display: none; }
     }
     .v-line.plus {
       transform: rotate(90deg);
+    }
+
+    @media(max-width: 940px) { padding: 60px 0px; }
+    @media(max-width: 640px) {
+      column-count: 1;
+
+      > .block:not(:last-child) {
+         margin-bottom: 60px;
+      }
+      > .v-line {
+        display: none;
+      }
     }
   }
 }
@@ -142,7 +150,7 @@
 /* open market section */
 /***********************/
 
-.open_market {
+#tech {
   h4 {
     padding-bottom: 25px;
   }
@@ -177,10 +185,10 @@
 }
 
 /***********************/
-/* sharing section */
+/* vision section */
 /***********************/
 
-.sharing {
+#vision {
   h4 {
     padding-bottom: 25px;
   }
@@ -208,11 +216,11 @@
 }
 
 /***********************/
-/* advisors section */
+/* team section */
 /***********************/
 
-.advisors {
-  .advisor {
+#team {
+  .member {
     flex: 0 0 50%;
     padding-bottom: 30px;
     text-align: center;
