@@ -60,6 +60,7 @@ nav {
     }
     &:hover > .dropdown {
       display: block;
+      @media(max-width: 800px) { display: none; }
     }
   }
   .h-button {
