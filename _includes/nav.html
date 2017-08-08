@@ -1,8 +1,9 @@
-<nav>
+<nav id="nav">
   <div class="flex-shrink flexi-c r">
-    <a href="index.html" class="flexi-i" id="logo"></a>
-
-    <div id="menu"></div>
+    <li class="left flexi-c r">
+      <a href="index.html" class="flexi-i" id="logo"></a>
+      <div id="menu" onClick="document.getElementById('nav').classList.toggle('open')"></div>
+    </li>
 
     <li class="h-link">
       <a href="index.html" class="flexi-i">WHAT IS</a>
