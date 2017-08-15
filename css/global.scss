@@ -100,27 +100,6 @@ section h1 {
 }
 
 /***********************/
-/* two col split       */
-/***********************/
-
-.split {
-  column-count: 2;
-  column-gap: 80px;
-
-  > div {
-    break-inside: avoid;
-  }
-
-  @media(max-width: 640px) {
-    column-count: 1;
-
-    > div:not(:last-child) {
-      padding-bottom: 40px;
-    }
-  }
-}
-
-/***********************/
 /* hline split */
 /***********************/
 
