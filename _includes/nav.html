@@ -4,72 +4,43 @@
       <a href="index.html" class="flexi-i" id="logo"></a>
       <div id="menu" onClick="document.getElementById('nav').classList.toggle('open')"></div>
     </li>
+    {% if page.name=='index.html' %}{% assign active=' h-button' %}{% else %}{% assign active='' %}{% endif %}
 
-    {% if page.name=='index.html' %}
-      <li class="h-link h-button">
-        <a href="index.html" class="flexi-i">WHAT IS</a>
+    <li class="h-link {{active}}">
+      <a href="index.html" class="flexi-i">WHAT IS</a>
 
-        <ul class="dropdown">
-          <li><a href="index.html#concept">concept</a></li>
-          <li><a href="index.html#tech">technology</a></li>
-          <li><a href="index.html#team">team</a></li>
-          <li><a href="index.html#vision">vision</a></li>
-        </ul>
-      </li>
-    {% else %}
-      <li class="h-link">
-        <a href="index.html" class="flexi-i">WHAT IS</a>
+      <ul class="dropdown">
+        <li><a href="index.html#background">background</a></li>
+        <li><a href="index.html#concept">concept</a></li>
+        <li><a href="index.html#tech">technology</a></li>
+        <li><a href="index.html#team">team</a></li>
+        <li><a href="index.html#vision">vision</a></li>
+      </ul>
+    </li>
 
-        <ul class="dropdown">
-          <li><a href="index.html#concept">concept</a></li>
-          <li><a href="index.html#tech">technology</a></li>
-          <li><a href="index.html#team">team</a></li>
-          <li><a href="index.html#vision">vision</a></li>
-        </ul>
-      </li>
-    {% endif %}
+    {% if page.name=='tech.html' %}{% assign active=' h-button' %}{% else %}{% assign active='' %}{% endif %}
 
-    {% if page.name=='tech.html' %}
-      <li class="h-link h-button">
-        <a href="tech.html" class="flexi-i">PROCESS</a>
+    <li class="h-link {{active}}">
+      <a href="tech.html" class="flexi-i">PROCESS</a>
 
-        <ul class="dropdown">
-          <li><a href="tech.html#apo">apo</a></li>
-          <li><a href="tech.html#trading">trading</a></li>
-          <li><a href="tech.html#acquisition">acquisition</a></li>
-          <li><a href="tech.html#cases">use cases</a></li>
-        </ul>
-      </li>
-    {% else %}
-      <li class="h-link">
-        <a href="tech.html" class="flexi-i h-link">PROCESS</a>
+      <ul class="dropdown">
+        <li><a href="tech.html#apo">apo</a></li>
+        <li><a href="tech.html#trading">trading</a></li>
+        <li><a href="tech.html#acquisition">acquisition</a></li>
+        <li><a href="tech.html#cases">use cases</a></li>
+      </ul>
+    </li>
 
-        <ul class="dropdown">
-          <li><a href="tech.html#apo">apo</a></li>
-          <li><a href="tech.html#trading">trading</a></li>
-          <li><a href="tech.html#acquisition">acquisition</a></li>
-          <li><a href="tech.html#cases">use cases</a></li>
-        </ul>
-      </li>
-    {% endif %}
-
-    {% if page.name=='roadmap.html' %}
-      <li class="h-link h-button"><a href="roadmap.html" class="flexi-i">TIMELINE</a></li>
-    {% else %}
-      <li class="h-link"><a href="roadmap.html" class="flexi-i">TIMELINE</a></li>
-    {% endif %}
+    {% if page.name=='roadmap.html' %}{% assign active=' h-button' %}{% else %}{% assign active='' %}{% endif %}
+    <li class="h-link {{active}}"><a href="roadmap.html" class="flexi-i">TIMELINE</a></li>
     
-    {% if page.name=='faq.html' %}
-      <li class="h-link h-button"><a href="faq.html" class="flexi-i">Q&A</a></li>
-    {% else %}
-      <li class="h-link"><a href="faq.html" class="flexi-i">Q&A</a></li>
-    {% endif %}
-    
-    {% if page.name=='contact.html' %}
-      <li class="h-link h-button"><a href="contact.html" class="flexi-i">CONTACT US</a></li>
-    {% else %}
-      <li class="h-link"><a href="contact.html" class="flexi-i">CONTACT US</a></li>
-    {% endif %}
+    {% if page.name=='faq.html' %}{% assign active=' h-button' %}{% else %}{% assign active='' %}{% endif %}
+      <li class="h-link {{active}}"><a href="faq.html" class="flexi-i">Q&A</a></li>
+
+
+    {% if page.name=='contact.html' %}{% assign active=' h-button' %}{% else %}{% assign active='' %}{% endif %}
+    <li class="h-link {{active}}"><a href="contact.html" class="flexi-i">CONTACT US</a></li>
+
   </div>
 </nav>
 <div class="nav_spacer"></div>
