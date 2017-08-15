@@ -10,6 +10,7 @@ collections:
 - cases
 - APO_steps
 - acquisition_steps
+- milestones
 
 baseurl: /artstock
 

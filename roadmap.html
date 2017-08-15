@@ -6,9 +6,42 @@ name: timeline
 
 <section id="roadmap">
   <div class="flex-shrink">
+    <h2 class="s-title">Timeline</h2>
 
-    {% for x in site.data.roadmap %}
-      <h2 class="s-title">{{x.stage}}</h2>
-      <p>{{x.text}}</p>
-    {% endfor %}
+    <div class="flexi-c r top">
+      <div class="flexi-i">
+        <h4>Background</h4>
+
+        <p>Artstock Exchange’s technical team, Yosemite Labs, has been working on developing a music service that utilizes blockchain technology since 2013. The concept is to provide a system that allows artists to bypass any middleman service and upload music directly to the blockchain, and automatically distribute proceeds generated from their usages. However, because music services like streaming and downloading have low return per transaction, resolving blockchain’s gas fee problem proved difficult. In the summer of 2016, the team developed a hybrid system that surpasses the limits of blockchain technology, and recognized its potential to be more suitable for a stock exchange platform than an art market. While our Founder was visiting an exhibition at the SF MoMA, he realized that the problems of the art market can be solved by engaging available artworks in the same manner as  stocks and trading them. Since then, the development team focused on building Artstock Exchange.</p>
+      </div>
+
+      <div class="flexi-i rundown">
+        <h4>Future</h4>
+
+        {% for x in site.data.roadmap %}
+          <div class="flexi-c r">
+            <div class="flexi-i date">{{x.date}}</div>
+            <div class="flexi-i text">
+              {% for text in x.list %}
+                <p>{{text}}</p>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+    </div>
+
+    <h2 class="s-title">Milestones</h2>
+
+    <div class="milestones">
+      {% for x in site.milestones %}
+        <div class="milestone">
+          <h2>{{x.label}}</h2>
+
+          {{x.content}}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>

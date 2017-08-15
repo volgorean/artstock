@@ -2,17 +2,66 @@
 ---
 
 #roadmap {
-  .s-title {
-    padding-bottom: 20px;
-  }
+  .s-title { padding-bottom: 40px; }
+  .s-title:not(:first-child) { padding-top: 80px; }
+
   p {
-    display: block;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 80px;
+    text-align: justify;
   }
-  p:last-child {
-    padding-bottom: 0;
+  .rundown {
+    margin-left: 40px;
+    text-align: left;
+
+    .date {
+      flex: 0 0 120px;
+      font: 600 14px/20px 'Montserrat', sans-serif;
+      color: gray;
+    }
+    .text {
+      font: 500 14px/20px 'Open Sans', sans-serif;
+    }
+    > div:not(:last-child) {
+      padding-bottom: 10px;
+    }
+  }
+
+  @media(max-width: 800px) {
+    .top {
+      flex-direction: column;
+    }
+    .rundown {
+      margin-top: 20px;
+      margin-left: 0;
+      p { text-align: left; }
+    }
+  }
+
+  .milestones {
+    width: 100%;
+
+    .milestone {
+      width: 840px;
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+      h2 {
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        text-align: center;
+        font: 700 34px/80px 'Montserrat', sans-serif;
+        border-radius: 50%;
+        background: gray;
+        margin-bottom: 30px;
+      }
+      p {
+        text-align: center;
+      }
+      &:not(:last-child) {
+        padding-bottom: 60px;
+      }
+    }
   }
 }
