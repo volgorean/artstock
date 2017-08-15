@@ -44,9 +44,19 @@
 
 #trading {
   text-align: justify;
+
   h4 { text-align: left; }
   .mid {
     margin: 0 15px;
+  }
+
+  @media(max-width: 800px) {
+    .flexi-c {
+      flex-direction: column;
+    }
+    .mid {
+      margin: 15px 0;
+    }
   }
 }
 
@@ -80,6 +90,7 @@
     > p {
       text-align: center;
       padding-bottom: 40px;
+      @media(max-width: 700px) { padding-bottom: 0; }
     }
   }
 
@@ -109,6 +120,12 @@
   }
   .active {
     display: block;
+  }
+
+  @media(max-width: 700px) {
+    .flexi-c {
+      flex-direction: column;
+    }
   }
 }
 
@@ -157,9 +174,21 @@
     border-bottom: 10px solid transparent;
     border-left: 10px solid gray;
   }
+
+  @media(max-width: 700px) {
+    .step {
+      width: 100px;
+
+      .label {
+        padding: 0 10px;
+        font: 500 12px/20px 'Montserrat', sans-serif;
+      }
+    }
+  }
 }
 .step-content {
   width: 840px;
+  max-width: 100%;
   margin: 0 auto;
   padding-top: 40px;
   text-align: justify;
