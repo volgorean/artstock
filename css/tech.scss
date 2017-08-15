@@ -43,7 +43,11 @@
 /***********************/
 
 #trading {
-
+  text-align: justify;
+  h4 { text-align: left; }
+  .mid {
+    margin: 0 15px;
+  }
 }
 
 /***********************/
@@ -113,6 +117,10 @@
 /***********************/
 
 .steps {
+  width: 920px;
+  max-width: 100%;
+  margin: 0 auto;
+
   .step {
     width: 200px;
     margin: 0 auto;
@@ -154,7 +162,7 @@
   width: 840px;
   margin: 0 auto;
   padding-top: 40px;
-  text-align: center;
+  text-align: justify;
 
   >div {display: none;}
   >div.active {display: block;}
