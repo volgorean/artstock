@@ -2,7 +2,26 @@
 ---
 
 #background {
-  text-align: center;
+  // text-align: center;
+
+  p {
+    text-align: justify;
+  }
+
+  .flexi-c > .flexi-i:last-child {
+    margin-left: 20px;
+  }
+
+  @media(max-width: 720px) {
+    .flexi-c {
+      flex-direction: column;
+
+      > .flexi-i:last-child {
+        margin: 0;
+        padding-top: 20px;
+      }
+    }
+  }
 }
 
 /***********************/
@@ -10,64 +29,48 @@
 /***********************/
 
 #concept {
-  text-align: center;
-  padding-bottom: 0;
-
   .s-title { padding-bottom: 40px; }
 
   .quad {
     background: white;
-    border-bottom: 3px solid lightgray;
-    border-radius: 3px;
     padding: 60px;
-    text-align: center;
+    border-radius: 3px;
+    border-bottom: 3px solid lightgray;
 
-    column-count: 2;
-    column-gap: 80px;
-
-    padding-bottom: 30px;
-    margin-top: 60px;
-
-    > .block {
-      min-height: 160px;
-      margin-bottom: 30px;
-      padding: 0 40px; 
-
-      break-inside: avoid;
+    .quad-item {
+      text-align: justify;
 
       .icon {
-        left: -5px;
+        display: block;
         width: 70px;
         height: 70px;
+        margin: 0 auto;
+        margin-bottom: 20px;
         background: lightgray; //#F2F2F2
         border-radius: 50%;
-        margin-bottom: 20px;
       }
     }
+    .flexi-c {
+      padding-top: 60px;
 
-    .v-line {
-      position: absolute;
-      top: calc(50% - 40px);
-      left: calc(50% - 2px);
-      width: 4px;
-      height: 80px;
-      background: lightgray;
-      border-radius: 3px;
-    }
-    .v-line.plus {
-      transform: rotate(90deg);
-    }
+      @media(max-width: 720px) {
+        width: 400px;
+        max-width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
 
-    @media(max-width: 940px) { padding: 60px 0px; }
-    @media(max-width: 640px) {
-      column-count: 1;
-
-      > .block:not(:last-child) {
-         margin-bottom: 60px;
+        .flexi-i {
+          margin: 0;
+          padding-bottom: 20px;
+          text-align: center;
+        }
       }
-      > .v-line {
-        display: none;
-      }
+    }
+    .flexi-i:not(:last-child) {
+      margin-right: 30px;
+    }
+    > h4 {
+      text-align: left;
     }
   }
 }
@@ -77,9 +80,6 @@
 /***********************/
 
 #tech {
-  h4 {
-    padding-bottom: 25px;
-  }
   ul {
     padding-left: 20px;
   }
@@ -88,55 +88,35 @@
     padding-bottom: 5px;
   }
 
-  .split {
-    > div {
-      break-inside: avoid;
+  .bar {
+    margin-bottom: 20px;
+    padding-left: 20px;
 
-      .bar {
-        margin-bottom: 20px;
-        padding-left: 20px;
+    background: url(../images/wormz.png);
 
-        background: url(../images/wormz.png);
-
-        .icon {
-          left: -5px;
-          width: 70px;
-          height: 70px;
-          background: #F8F8F8; //#F2F2F2
-          border-radius: 50%;
-        }
-      }
+    .icon {
+      left: -5px;
+      width: 70px;
+      height: 70px;
+      background: #F8F8F8; //#F2F2F2
+      border-radius: 50%;
     }
   }
-}
-
-/***********************/
-/* vision section */
-/***********************/
-
-#vision {
-  h4 {
-    padding-bottom: 25px;
+  p {
+    text-align: justify;
   }
-  .split {
-    background: white;
-    border-bottom: 3px solid lightgray;
-    border-radius: 3px;
-    padding: 120px 60px;
-    text-align: center;
 
-    @media(max-width: 640px) { padding: 100px 60px; }
+  .flexi-i:not(:last-child) {
+    margin-right: 20px;
 
-    .v-line {
-      position: absolute;
-      top: calc(50% - 40px);
-      left: calc(50% - 2px);
-      width: 4px;
-      height: 80px;
-      background: lightgray;
-      border-radius: 3px;
-
-      @media(max-width: 640px) { display: none; }
+    @media(max-width: 720px) {
+      margin: 0;
+      padding-bottom: 20px;
+    }
+  }
+  .flexi-c {
+    @media(max-width: 720px) {
+      flex-direction: column;
     }
   }
 }
@@ -177,68 +157,14 @@
 }
 
 /***********************/
-/* call to action section */
+/* vision section */
 /***********************/
 
-#call_to_action {
-  padding: 0;
-  margin-top: -80px;
-  z-index: 400;
-
-  .call_to_action {
-    width: 1060px;
-    max-width: calc(100% - 40px);
-    bottom: -80px;
-    margin: 0 auto;
-    padding: 80px;
-    border-radius: 3px;
+#vision {
+  .block {
     background: white;
     border-bottom: 3px solid lightgray;
-
-    @media(max-width: 520px) { padding: 40px; }
-
-    .split {
-      text-align: left;
-
-      .v-line {
-        position: absolute;
-        top: calc(50% - 40px);
-        left: calc(50% - 2px);
-        width: 4px;
-        height: 80px;
-        background: lightgray;
-        border-radius: 3px;
-
-        @media(max-width: 640px) { display: none; }
-      }
-
-      h3 {
-        width: 100%;
-        max-width: 260px;
-        margin: 0 auto;
-        margin-top: 75px;
-        font: 600 24px/28px 'Montserrat', sans-serif;
-        text-align: center;
-      }
-      .checkbox {
-        height: 32px;
-        width: 100%;
-        margin-bottom: 10px;
-        background: lightgray;
-        overflow: hidden;
-
-        input {
-          flex: 0 0 32px;
-          height: 20px;
-          padding: 0px;
-          margin: 6px;
-        }
-        p {
-          flex: 1 1;
-          font: 500 18px/32px 'Open Sans', sans-serif;
-        }
-      }
-    }
+    border-radius: 3px;
+    padding: 60px;
   }
 }
-
