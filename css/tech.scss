@@ -113,15 +113,14 @@
 /***********************/
 
 .steps {
-  column-count: 4;
-  column-gap: 20px;
-
-  > .step {
-    break-inside: avoid;
+  .step {
+    width: 200px;
+    margin: 0 auto;
     border-radius: 5px;
+    overflow: hidden;
     background: white;
-    margin-bottom: 25px;
     box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.1);
+    cursor: pointer;
 
     .graphic {
       width: 100%;
@@ -134,33 +133,29 @@
       background: black;
       color: white;
     }
-    .text {
-      padding: 25px;
-      min-height: 220px;
+    &.active {
+      border: 1px solid black;
     }
   }
-  > .step:not(:last-child) {
-    .label::after {
-      position: absolute;
-      content: "";
-      width: 10px;
-      height: 10px;
-      right: -5px;
-      top: calc(50% - 5px);
-      background: black;
-      transform: rotate(45deg);
-    }
-    @media(max-width: 960px) { .label::after { display: none; }}
-  }
-  @media(max-width: 960px) {
-    column-count: 2;
+  > div:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    right: -5px;
+    top: calc(50% - 5px);
 
-    width: 540px;
-    max-width: 100%;
-    margin: 0 auto;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid gray;
   }
-  @media(max-width: 480px) {
-    column-count: 1;
-    width: 240px;
-  }
+}
+.step-content {
+  width: 840px;
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center;
+
+  >div {display: none;}
+  >div.active {display: block;}
 }

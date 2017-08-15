@@ -10,18 +10,45 @@ name: tech
 
     <p>Art Public Offering (APO) is a process for generating and offering art share that enables a divided ownership, shared by many.</p>
 
-    <div class="steps">
-      {% for s in site.data.valuation %}
-        <div class="step">
-          <img src="{{s.graphic}}" class="graphic">
-          <h4 class="label">{{s.label}}</h4>
-          <div class="text">
-            <p>{{s.text}}</p>
+    <div class="steps flexi-c r">
+      {% for s in site.APO_steps %}
+        {% if forloop.first==true %}{% assign active=' active' %}{% else %}{% assign active='' %}{% endif %}
+
+        <div class="flexi-i">
+          <div class="apoLink step{{active}}" onClick="activeAPO(this)" data-label="s_{{s.label | handleize}}">
+            <img src="{{s.graphic}}" class="graphic">
+            <h4 class="label">{{s.label}}</h4>
           </div>
         </div>
       {% endfor %}
     </div>
+
+    <div class="step-content" id="apoTexts">
+      {% for s in site.APO_steps %}
+        {% if forloop.first==true %}{% assign active=' active' %}{% else %}{% assign active='' %}{% endif %}
+        
+        <div class="{{active}}" id="s_{{s.label | handleize}}">
+          {{s.content}}
+        </div>
+      {% endfor %}
+    </div>
   </div>
+
+  <script type="text/javascript">
+    function activeAPO(what) {
+      Array.from(document.getElementsByClassName("apoLink"))
+      .forEach(function(link) {
+        link.classList.remove("active")
+      })
+      what.classList.add("active")
+
+      Array.from(document.getElementById("apoTexts").children)
+      .forEach(function(text) {
+        text.classList.remove("active")
+      })
+      document.getElementById(what.dataset.label).classList.add("active")
+    }
+  </script>
 </section>
 
 <div class="h-line"><div></div></div>
@@ -50,22 +77,49 @@ name: tech
 
 <section id="acquisition">
   <div class="flex-shrink">
-    <h2 class="s-title">Acquisition</h2>
+    <h2 class="s-title">Acquisition and Delisting Process</h2>
 
     <p>Artstock Exchange provides a new paradigm of art distribution.</p>
 
-    <div class="steps">
-      {% for s in site.data.winwin %}
-        <div class="step">
-          <img src="{{s.graphic}}" class="graphic">
-          <h4 class="label">{{s.label}}</h4>
-          <div class="text">
-            <p>{{s.text}}</p>
+    <div class="steps flexi-c r">
+      {% for s in site.acquisition_steps %}
+        {% if forloop.first==true %}{% assign active=' active' %}{% else %}{% assign active='' %}{% endif %}
+
+        <div class="flexi-i">
+          <div class="acqLink step{{active}}" onClick="activeAcq(this)" data-label="s_{{s.label | slugify}}">
+            <img src="{{s.graphic}}" class="graphic">
+            <h4 class="label">{{s.label}}</h4>
           </div>
         </div>
       {% endfor %}
     </div>
+
+    <div class="step-content" id="acqTexts">
+      {% for s in site.acquisition_steps %}
+        {% if forloop.first==true %}{% assign active=' active' %}{% else %}{% assign active='' %}{% endif %}
+        
+        <div class="{{active}}" id="s_{{s.label | slugify}}">
+          {{s.content}}
+        </div>
+      {% endfor %}
+    </div>
   </div>
+
+  <script type="text/javascript">
+    function activeAcq(what) {
+      Array.from(document.getElementsByClassName("acqLink"))
+      .forEach(function(link) {
+        link.classList.remove("active")
+      })
+      what.classList.add("active")
+
+      Array.from(document.getElementById("acqTexts").children)
+      .forEach(function(text) {
+        text.classList.remove("active")
+      })
+      document.getElementById(what.dataset.label).classList.add("active")
+    }
+  </script>
 </section>
 
 <section id="cases">
@@ -78,42 +132,38 @@ name: tech
       <div class="flexi-i sidebar">
         <ul id="caseLinks">
           {% for c in site.cases %}
-            {% if forloop.first == true %}
-              <li onclick="activeCase(this)" data-name="c_{{c.name | handleize}}" class="active">{{c.name}}</li>
-            {% else %}
-              <li onclick="activeCase(this)" data-name="c_{{c.name | handleize}}">{{c.name}}</li>
-            {% endif %}
+            {% if forloop.first==true %}{% assign active=' active' %}{% else %}{% assign active='' %}{% endif %}
+            
+            <li onclick="activeCase(this)" data-name="c_{{c.name | handleize}}" class="{{active}}">{{c.name}}</li>
           {% endfor %}
         </ul>
       </div>
 
       <div class="flexi-i" id="caseTexts">
         {% for c in site.cases %}
-          {% if forloop.first == true %}
-            <div class="case active" id="c_{{c.name | handleize}}">
-          {% else %}
-            <div class="case" id="c_{{c.name | handleize}}">
-          {% endif %}
-              <h5>{{c.name}}</h5>
-              {{c.content}}
-            </div>
+          {% if forloop.first==true %}{% assign active=' active' %}{% else %}{% assign active='' %}{% endif %}
+
+          <div class="case{{active}}" id="c_{{c.name | handleize}}">
+            <h5>{{c.name}}</h5>
+            {{c.content}}
+          </div>
         {% endfor %}
       </div>
   </div>
+
+  <script type="text/javascript">
+    function activeCase(what) {
+      Array.from(document.getElementById("caseLinks").children)
+      .forEach(function(link) {
+        link.classList.remove("active")
+      })
+      what.classList.add("active")
+
+      Array.from(document.getElementById("caseTexts").children)
+      .forEach(function(text) {
+        text.classList.remove("active")
+      })
+      document.getElementById(what.dataset.name).classList.add("active")
+    }
+  </script>
 </section>
-
-<script type="text/javascript">
-  function activeCase(what) {
-    Array.from(document.getElementById("caseLinks").children)
-    .forEach(function(link) {
-      link.classList.remove("active")
-    })
-    what.classList.add("active")
-
-    Array.from(document.getElementById("caseTexts").children)
-    .forEach(function(text) {
-      text.classList.remove("active")
-    })
-    document.getElementById(what.dataset.name).classList.add("active")
-  }
-</script>

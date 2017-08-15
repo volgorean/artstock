@@ -8,6 +8,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 collections:
 - faqs
 - cases
+- APO_steps
+- acquisition_steps
 
 baseurl: /artstock
 
