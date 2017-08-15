@@ -19,11 +19,6 @@
 
 #milestones {
   .milestone {
-    background: white;
-    border-bottom: 3px solid lightgray;
-    border-radius: 3px;
-    padding: 60px;
-
     &:not(:last-child) {
       margin-bottom: 60px;
 

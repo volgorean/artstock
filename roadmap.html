@@ -25,7 +25,7 @@ name: timeline
 <section id="milestones">
   <div class="flex-shrink">
     {% for x in site.milestones %}
-      <div class="milestone" id="milestone_{{forloop.index}}">
+      <div class="card milestone" id="milestone_{{forloop.index}}">
         <h4>{{x.label}}</h4>
 
         {{x.content}}

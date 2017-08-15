@@ -118,23 +118,20 @@
     background-position: center;
   }
 
-  .flexi-i {
+  .card {
     padding: 40px;
-    background: ivory;
-    border-radius: 3px;
-    border-bottom: 3px solid lightgray;
   }
 
   .flexi-i:not(:last-child) {
     margin-right: 100px;
 
-    @media(max-width: 720px) {
+    @media(max-width: 920px) {
       margin: 0;
-      padding-bottom: 20px;
+      margin-bottom: 20px;
     }
   }
   .flexi-c {
-    @media(max-width: 720px) {
+    @media(max-width: 920px) {
       flex-direction: column;
     }
   }
@@ -180,10 +177,4 @@
 /***********************/
 
 #vision {
-  .block {
-    background: white;
-    border-bottom: 3px solid lightgray;
-    border-radius: 3px;
-    padding: 60px;
-  }
 }
