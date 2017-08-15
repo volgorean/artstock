@@ -6,129 +6,100 @@ name: contact
 
 <section class="contact">
   <div class="flex-shrink">
-    <div class="flexi-c r w">
-      <div class="flexi-i sidebar">
-        <h2>Drop us a line</h2>
+    <h2>Drop us a line</h2>
 
-        <ul>
-          <h4>Sales</h4>
-
-          <li>1(111)777-4567</li>
-          <li>sales@testing.com</li>
-        </ul>
-
-        <ul>
-          <h4>Investors</h4>
-
-          <li>1(111)777-4567</li>
-          <li>sales@testing.com</li>
-        </ul>
-
-        <ul>
-          <h4>Art Owners</h4>
-
-          <li>1(111)777-4567</li>
-          <li>sales@testing.com</li>
-        </ul>
+    <form>
+      <div class="flexi-c r">
+        <div class="flexi-i left">
+          <label>I am a</label>
+          <select onChange="optionalFields(this.value)">
+            <option disabled selected value></option>
+            <option value="investor">Investor</option>
+            <option value="collector">Collector</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="flexi-i right"></div>
       </div>
 
-      <div class="flexi-i">
-        <h2>Here and now</h2>
+      <div class="flexi-c r">
+        <div class="flexi-i left">
+          <label>name</label>
+          <input placeholder="first"></input>
+        </div>
 
-        <form>
-          <div class="flexi-c r">
-            <div class="flexi-i left">
-              <label>I am a</label>
-              <select onChange="optionalFields(this.value)">
-                <option disabled selected value></option>
-                <option value="investor">Investor</option>
-                <option value="collector">Collector</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="flexi-i right"></div>
-          </div>
-
-          <div class="flexi-c r">
-            <div class="flexi-i left">
-              <label>name</label>
-              <input placeholder="first"></input>
-            </div>
-
-            <div class="flexi-i right">
-              <input placeholder="last"></input>
-            </div>
-          </div>
-
-          <label>email</label>
-          <input placeholder="abc@test.com"></input>
-
-          <label class="optional" data-optional="investor">phone</label>
-          <input placeholder="1(111) 111-1111" class="optional" data-optional="investor"></input>
-
-          <label class="optional" data-optional="collector">phone</label>
-          <input placeholder="1(111) 111-1111" class="optional" data-optional="collector"></input>
-
-          <label>message</label>
-          <textarea rows="6"></textarea>
-
-          <div class="flexi-c r optional" data-optional="investor">
-            <div class="flexi-i left">
-              <label>I am interested in</label>
-              <select>
-                <option disabled selected value></option>
-                <option>Paintings</option>
-                <option>Sculptures</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div class="flexi-i right">
-              <label>In the range of</label>
-              <select>
-                <option disabled selected value></option>
-                <option>Less than 50K USD</option>
-                <option>50k - 100k USD</option>
-                <option>200k - 1m USD</option>
-                <option>Greater than 1m USD</option>
-                <option>Prefer not to say</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="flexi-c r optional" data-optional="collector">
-            <div class="flexi-i left">
-              <label>I own</label>
-              <select>
-                <option disabled selected value></option>
-                <option>Paintings</option>
-                <option>Sculptures</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div class="flexi-i right">
-              <label>In the range of</label>
-              <select>
-                <option disabled selected value></option>
-                <option>Less than 50K USD</option>
-                <option>50k - 100k USD</option>
-                <option>200k - 1m USD</option>
-                <option>Greater than 1m USD</option>
-                <option>Prefer not to say</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="check">
-            <input type="checkbox"></input>
-            <label>Keep me updated</label>
-          </div>
-
-          <input type="submit" value="Send"></input>
-        </form>
+        <div class="flexi-i right">
+          <input placeholder="last"></input>
+        </div>
       </div>
-    </div>
+
+      <label>email</label>
+      <input placeholder="abc@test.com"></input>
+
+      <label class="optional" data-optional="investor">phone</label>
+      <input placeholder="1(111) 111-1111" class="optional" data-optional="investor"></input>
+
+      <label class="optional" data-optional="collector">phone</label>
+      <input placeholder="1(111) 111-1111" class="optional" data-optional="collector"></input>
+
+      <label>message</label>
+      <textarea rows="6"></textarea>
+
+      <div class="flexi-c r optional" data-optional="investor">
+        <div class="flexi-i left">
+          <label>I am interested in</label>
+          <select>
+            <option disabled selected value></option>
+            <option>Paintings</option>
+            <option>Sculptures</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="flexi-i right">
+          <label>In the range of</label>
+          <select>
+            <option disabled selected value></option>
+            <option>Less than 50K USD</option>
+            <option>50k - 100k USD</option>
+            <option>200k - 1m USD</option>
+            <option>Greater than 1m USD</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="flexi-c r optional" data-optional="collector">
+        <div class="flexi-i left">
+          <label>I own</label>
+          <select>
+            <option disabled selected value></option>
+            <option>Paintings</option>
+            <option>Sculptures</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="flexi-i right">
+          <label>In the range of</label>
+          <select>
+            <option disabled selected value></option>
+            <option>Less than 50K USD</option>
+            <option>50k - 100k USD</option>
+            <option>200k - 1m USD</option>
+            <option>Greater than 1m USD</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="check">
+        <input type="checkbox"></input>
+        <label>Keep me updated</label>
+      </div>
+
+      <input type="submit" value="Send"></input>
+    </form>
   </div>
 </section>
 

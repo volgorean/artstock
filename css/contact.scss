@@ -5,26 +5,6 @@
   h2 {
     padding-bottom: 30px;
   }
-  .sidebar {
-    flex: 0 0 320px;
-
-    ul {
-      padding-bottom: 15px;
-    }
-    h4 {
-      font: 700 16px/20px 'Montserrat', sans-serif;
-    }
-    li {
-      padding-left: 15px;
-      font: 500 14px/20px 'Montserrat', sans-serif;
-    }
-
-    @media(max-width: 920px) { flex: 0 0 220px; }
-    @media(max-width: 680px) {
-      min-width: 100%;
-      text-align: center;
-    }
-  }
   form {
     .left {
       padding-right: 5px;

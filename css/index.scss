@@ -102,11 +102,31 @@
     }
   }
   p {
-    text-align: justify;
+    text-align: left;
+  }
+
+
+  .plus {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: calc(40% - 20px);
+    left: calc(50% - 20px);
+    background: url(../images/plus.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .flexi-i {
+    padding: 40px;
+    background: ivory;
+    border-radius: 3px;
+    border-bottom: 3px solid lightgray;
   }
 
   .flexi-i:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 100px;
 
     @media(max-width: 720px) {
       margin: 0;

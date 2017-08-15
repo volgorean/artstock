@@ -3,68 +3,39 @@
 
 #roadmap {
   padding-bottom: 0;
+  text-align: justify;
 
   .s-title { padding-bottom: 40px; }
-
-  p {
-    text-align: justify;
-  }
   .rundown {
-    margin-left: 40px;
-    text-align: left;
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
 
-    .date {
-      flex: 0 0 120px;
-      font: 600 14px/20px 'Montserrat', sans-serif;
-      color: gray;
-    }
-    .text {
-      font: 500 14px/20px 'Open Sans', sans-serif;
-    }
-    > div:not(:last-child) {
-      padding-bottom: 10px;
-    }
-  }
-
-  @media(max-width: 800px) {
-    .top {
-      flex-direction: column;
-    }
-    .rundown {
-      margin-top: 20px;
-      margin-left: 0;
-      p { text-align: left; }
-    }
+    h4:not(:first-child) { margin-top: 10px; }
   }
 }
 
 #milestones {
-  width: 100%;
-
-  .s-title { padding-bottom: 40px; }
-
   .milestone {
-    width: 840px;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
+    background: white;
+    border-bottom: 3px solid lightgray;
+    border-radius: 3px;
+    padding: 60px;
 
-    h2 {
-      display: block;
-      width: 80px;
-      height: 80px;
-      margin: 0 auto;
-      text-align: center;
-      font: 700 34px/80px 'Montserrat', sans-serif;
-      border-radius: 50%;
-      background: gray;
-      margin-bottom: 30px;
-    }
-    p {
-      text-align: center;
-    }
     &:not(:last-child) {
-      padding-bottom: 60px;
+      margin-bottom: 60px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: calc(50% - 2px);
+        height: 100%;
+        width: 4px;
+        background: lightgray;
+      }
     }
   }
 }

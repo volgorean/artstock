@@ -21,10 +21,13 @@ footer {
   }
   #logo {
     display: inline-block;
-    width: 165px;
-    height: 45px;
+    width: 150px;
+    height: 40px;
     margin-bottom: 5px;
-    background: gray;
+    background: url(../images/logo.png);
+    background-size: auto 100%;
+    background-position: top left;
+    background-repeat: no-repeat;
   }
   a {
     color: white;
