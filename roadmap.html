@@ -31,17 +31,19 @@ name: timeline
       </div>
 
     </div>
+  </div>
+</section>
 
+<section id="milestones">
+  <div class="flex-shrink">
     <h2 class="s-title">Milestones</h2>
 
-    <div class="milestones">
-      {% for x in site.milestones %}
-        <div class="milestone">
-          <h2>{{x.label}}</h2>
+    {% for x in site.milestones %}
+      <div class="milestone">
+        <h2>{{x.label}}</h2>
 
-          {{x.content}}
-        </div>
-      {% endfor %}
-    </div>
+        {{x.content}}
+      </div>
+    {% endfor %}
   </div>
 </section>

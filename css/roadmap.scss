@@ -2,8 +2,9 @@
 ---
 
 #roadmap {
+  padding-bottom: 0;
+
   .s-title { padding-bottom: 40px; }
-  .s-title:not(:first-child) { padding-top: 80px; }
 
   p {
     text-align: justify;
@@ -35,33 +36,35 @@
       p { text-align: left; }
     }
   }
+}
 
-  .milestones {
-    width: 100%;
+#milestones {
+  width: 100%;
 
-    .milestone {
-      width: 840px;
-      max-width: 100%;
+  .s-title { padding-bottom: 40px; }
+
+  .milestone {
+    width: 840px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      display: block;
+      width: 80px;
+      height: 80px;
       margin: 0 auto;
       text-align: center;
-
-      h2 {
-        display: block;
-        width: 80px;
-        height: 80px;
-        margin: 0 auto;
-        text-align: center;
-        font: 700 34px/80px 'Montserrat', sans-serif;
-        border-radius: 50%;
-        background: gray;
-        margin-bottom: 30px;
-      }
-      p {
-        text-align: center;
-      }
-      &:not(:last-child) {
-        padding-bottom: 60px;
-      }
+      font: 700 34px/80px 'Montserrat', sans-serif;
+      border-radius: 50%;
+      background: gray;
+      margin-bottom: 30px;
+    }
+    p {
+      text-align: center;
+    }
+    &:not(:last-child) {
+      padding-bottom: 60px;
     }
   }
 }

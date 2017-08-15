@@ -7,7 +7,7 @@
     {% if page.name=='index.html' %}{% assign active=' h-button' %}{% else %}{% assign active='' %}{% endif %}
 
     <li class="h-link {{active}}">
-      <a href="index.html" class="flexi-i">WHAT IS</a>
+      <a href="index.html" class="flexi-i">About Artstock Exchange</a>
 
       <ul class="dropdown">
         <li><a href="index.html#background">background</a></li>
@@ -21,7 +21,7 @@
     {% if page.name=='tech.html' %}{% assign active=' h-button' %}{% else %}{% assign active='' %}{% endif %}
 
     <li class="h-link {{active}}">
-      <a href="tech.html" class="flexi-i">PROCESS</a>
+      <a href="tech.html" class="flexi-i">Services</a>
 
       <ul class="dropdown">
         <li><a href="tech.html#apo">apo</a></li>
@@ -32,14 +32,21 @@
     </li>
 
     {% if page.name=='roadmap.html' %}{% assign active=' h-button' %}{% else %}{% assign active='' %}{% endif %}
-    <li class="h-link {{active}}"><a href="roadmap.html" class="flexi-i">TIMELINE</a></li>
+    <li class="h-link {{active}}">
+      <a href="roadmap.html" class="flexi-i">History & Direction</a>
+
+      <ul class="dropdown">
+        <li><a href="roadmap.html#roadmap">timeline</a></li>
+        <li><a href="roadmap.html#milestones">milestones</a></li>
+      </ul>
+    </li>
     
     {% if page.name=='faq.html' %}{% assign active=' h-button' %}{% else %}{% assign active='' %}{% endif %}
-      <li class="h-link {{active}}"><a href="faq.html" class="flexi-i">Q&A</a></li>
+    <li class="h-link {{active}}"><a href="faq.html" class="flexi-i">Q&A</a></li>
 
 
     {% if page.name=='contact.html' %}{% assign active=' h-button' %}{% else %}{% assign active='' %}{% endif %}
-    <li class="h-link {{active}}"><a href="contact.html" class="flexi-i">CONTACT US</a></li>
+    <li class="h-link {{active}}"><a href="contact.html" class="flexi-i">Contact Us</a></li>
 
   </div>
 </nav>
