@@ -140,7 +140,7 @@ name: tech
           {% for c in site.cases %}
             {% if forloop.first==true %}{% assign active=' active' %}{% else %}{% assign active='' %}{% endif %}
             
-            <li onclick="activeCase(this)" data-name="c_{{c.name | handleize}}" class="{{active}}">{{c.name}}</li>
+            <li onclick="activeCase(this)" data-name="c_{{c.name | slugify}}" class="{{active}}">{{c.name}}</li>
           {% endfor %}
         </ul>
       </div>
@@ -149,7 +149,7 @@ name: tech
         {% for c in site.cases %}
           {% if forloop.first==true %}{% assign active=' active' %}{% else %}{% assign active='' %}{% endif %}
 
-          <div class="case{{active}}" id="c_{{c.name | handleize}}">
+          <div class="case{{active}}" id="c_{{c.name | slugify}}">
             <h5>{{c.name}}</h5>
             {{c.content}}
           </div>
