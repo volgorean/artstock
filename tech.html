@@ -16,7 +16,7 @@ name: tech
 
         <div class="flexi-i">
           <div class="apoLink step{{active}}" onClick="activeAPO(this)" data-label="s_{{s.label | handleize}}">
-            <img src="{{s.graphic}}" class="graphic">
+            <div class="graphic" style="background:url({{s.graphic}});"></div>
             <h4 class="label">{{s.label}}</h4>
           </div>
         </div>
@@ -93,7 +93,7 @@ name: tech
 
         <div class="flexi-i">
           <div class="acqLink step{{active}}" onClick="activeAcq(this)" data-label="s_{{s.label | slugify}}">
-            <img src="{{s.graphic}}" class="graphic">
+            <div class="graphic" style="background:url({{s.graphic}});"></div>
             <h4 class="label">{{s.label}}</h4>
           </div>
         </div>

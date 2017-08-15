@@ -83,10 +83,13 @@ nav {
     margin-right: auto;
 
     #logo {
-      flex: 0 0 220px;
-      margin-left: 0;
+      flex: 0 0 150px;
+      margin: 10px 0;
       margin-right: auto;
-      background: gray;
+      background: url(../images/logo.png);
+      background-size: auto 100%;
+      background-position: top left;
+      background-repeat: no-repeat;
     }
     #menu {
       flex: 0 0 30px;
